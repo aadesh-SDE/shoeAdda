@@ -1,0 +1,245 @@
+<title>ShoeAdda Typography</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&family=Archivo:wght@400;500;600;700&family=Noto+Sans:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+Gujarati:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&family=Noto+Sans+Telugu:wght@400;600;700&display=swap">
+<style>
+/* Layout: three font pairings side by side. Each shows a type scale, a product card in the chosen Cocoa and Mist colors, and the same UI strings in all six app languages. */
+:root{
+  --bg:#FBFBFB; --surface:#EEEEEC; --fg:#131212; --accent:#68513F; --on:#FFFFFF; --soft:#9BB3BE; --line:#D4D5D2; --muted:#6B6B66; --sale:#B4472F; --card:#FFFFFF;
+  --indic:'Noto Sans Devanagari','Noto Sans Gujarati','Noto Sans Tamil','Noto Sans Telugu','Noto Sans';
+  --ui:system-ui,'Segoe UI',Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#131212;--surface:#1F1E1E;--fg:#F2F0EC;--accent:#C9B79A;--on:#131212;--soft:#2B3A41;--line:#302E2E;--muted:#A19C94;--sale:#E58A72;--card:#191818;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#131212;--surface:#1F1E1E;--fg:#F2F0EC;--accent:#C9B79A;--on:#131212;--soft:#2B3A41;--line:#302E2E;--muted:#A19C94;--sale:#E58A72;--card:#191818;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--ui);font-size:15px;line-height:1.5;
+  padding-block:32px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1320px;margin:0 auto}
+h1{font-family:'Plus Jakarta Sans',var(--ui);font-size:clamp(28px,5vw,40px);line-height:1.1;margin:0 0 8px;text-wrap:balance;letter-spacing:-.01em}
+.lead{color:var(--muted);max-width:66ch;margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:20px;align-items:start}
+.opt{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:20px;min-width:0}
+.head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.tag{font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pill{font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--fg);color:var(--bg);padding:3px 9px;border-radius:99px}
+.pairs{font-family:var(--ui);color:var(--muted);font-size:13.5px;margin:0}
+.pairs b{color:var(--fg)}
+.sec{font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+
+/* each pairing sets heading and body families, Indic scripts fall through to Noto */
+.f1{--head:'Plus Jakarta Sans';--body:'Plus Jakarta Sans'}
+.f2{--head:'Sora';--body:'DM Sans'}
+.f3{--head:'Poppins';--body:'Poppins'}
+.f4{--head:'Barlow Condensed';--body:'Archivo'}
+.f4 .h{text-transform:uppercase;letter-spacing:.01em;font-size:36px}
+.f4 .t,.f4 .pname{font-weight:700;font-size:22px}
+.f4 .pname{font-size:18px}
+.opt{--hf:var(--head),var(--indic),sans-serif;--bf:var(--body),var(--indic),sans-serif}
+.h,.t{font-family:var(--hf)}
+.b,.c{font-family:var(--bf)}
+
+.scale{display:flex;flex-direction:column;gap:10px}
+.row{display:grid;grid-template-columns:70px 1fr;gap:10px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:10px}
+.row:last-child{border-bottom:0;padding-bottom:0}
+.row small{font-family:var(--ui);font-size:11px;color:var(--muted);line-height:1.3}
+.d1{font-size:30px;line-height:1.15;font-weight:700;letter-spacing:-.01em}
+.d2{font-size:20px;line-height:1.3;font-weight:600}
+.d3{font-size:15px;line-height:1.55;font-weight:400}
+.d4{font-size:12px;line-height:1.4;font-weight:500;color:var(--muted)}
+.d5{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}
+.d5 s{font-size:13px;font-weight:400;color:var(--muted);margin-left:6px}
+
+.pcard{background:var(--surface);border-radius:14px;padding:10px;display:flex;flex-direction:column;gap:8px;max-width:280px}
+.pshot{background:var(--soft);border-radius:10px;aspect-ratio:16/9;display:grid;place-items:center}
+.pshot svg{width:62%;height:auto}
+.pbrand{font-family:var(--bf);font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pname{font-family:var(--hf);font-weight:600;font-size:15px;line-height:1.3}
+.pprice{font-family:var(--bf);font-variant-numeric:tabular-nums;display:flex;gap:8px;align-items:baseline}
+.pprice b{font-size:17px}
+.pprice s{font-size:12px;color:var(--muted)}
+.pprice span{font-size:12px;color:var(--sale);font-weight:600}
+.pbtn{font-family:var(--bf);display:block;text-align:center;font-weight:600;font-size:14px;padding:10px;border-radius:12px;background:var(--accent);color:var(--on)}
+
+.langs{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.lr{display:grid;grid-template-columns:76px 1fr;gap:10px;align-items:center;padding:9px 12px;border-bottom:1px solid var(--line)}
+.lr:last-child{border-bottom:0}
+.lr small{font-family:var(--ui);font-size:11px;color:var(--muted)}
+.lr div{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;min-width:0}
+.lr .a{font-family:var(--hf);font-weight:600;font-size:15px}
+.lr .z{font-family:var(--bf);font-size:13px;color:var(--muted)}
+.facts{font-family:var(--ui);margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:13.5px}
+.facts li{display:flex;gap:8px}
+.facts strong{min-width:70px;flex:none;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.foot{font-family:var(--ui);margin-top:28px;color:var(--muted);font-size:13px;max-width:72ch}
+</style>
+
+<div class="wrap">
+  <h1>ShoeAdda typography</h1>
+  <p class="lead">Four font pairings shown with the Cocoa and Mist colors. Every pairing falls back to the matching Noto Sans script for Hindi, Marathi, Gujarati, Tamil and Telugu, since none of the Latin fonts include those letters. The same UI text appears in all six languages so you can compare how each pairing handles them.</p>
+
+  <div class="grid">
+
+    <article class="opt f1">
+      <div class="head"><span class="tag">Pairing 1</span><span class="pill">Recommended</span></div>
+      <p class="pairs"><b>Plus Jakarta Sans</b> for headings and body, <b>Noto Sans</b> for the Indian scripts.</p>
+      <div>
+        <p class="sec">Type scale</p>
+        <div class="scale">
+          <div class="row"><small>Display 30</small><div class="h d1">Find your fit</div></div>
+          <div class="row"><small>Title 20</small><div class="t d2">Nike Air Jordan 1 Red and Black</div></div>
+          <div class="row"><small>Body 15</small><div class="b d3">Lightweight cushioning and a grippy outsole for everyday wear. Ships in one week.</div></div>
+          <div class="row"><small>Caption 12</small><div class="c d4">Only 2 left in UK 9 · Free returns within 30 days</div></div>
+          <div class="row"><small>Price 20</small><div class="b d5">₹12,499<s>₹12,999</s></div></div>
+        </div>
+      </div>
+      <div>
+        <p class="sec">Product card</p>
+        <div class="pcard">
+          <div class="pshot"><svg viewBox="0 0 100 62" aria-hidden="true"><path d="M8 50c0-6 6-8 12-10l16-17c4-4 10-2 14 2l8 8c8 2 26 4 34 10 4 3 4 8 0 10H12z" fill="var(--accent)"/><path d="M8 50h84v6c0 2-2 3-4 3H12c-2 0-4-1-4-3z" fill="var(--fg)"/></svg></div>
+          <div><div class="pbrand">Nike</div><div class="pname">Air Jordan 1 Red and Black</div></div>
+          <div class="pprice"><b>₹12,499</b><s>₹12,999</s><span>4% off</span></div>
+          <span class="pbtn">Add to cart</span>
+        </div>
+      </div>
+      <div>
+        <p class="sec">Same UI text in 6 languages</p>
+        <div class="langs">
+          <div class="lr"><small>English</small><div><span class="a">Add to cart</span><span class="z">Choose your size</span></div></div>
+          <div class="lr"><small>Hindi</small><div lang="hi"><span class="a">कार्ट में जोड़ें</span><span class="z">अपना साइज़ चुनें</span></div></div>
+          <div class="lr"><small>Marathi</small><div lang="mr"><span class="a">कार्टमध्ये जोडा</span><span class="z">तुमचा साईज निवडा</span></div></div>
+          <div class="lr"><small>Gujarati</small><div lang="gu"><span class="a">કાર્ટમાં ઉમેરો</span><span class="z">તમારી સાઇઝ પસંદ કરો</span></div></div>
+          <div class="lr"><small>Tamil</small><div lang="ta"><span class="a">கார்ட்டில் சேர்</span><span class="z">உங்கள் அளவைத் தேர்ந்தெடுங்கள்</span></div></div>
+          <div class="lr"><small>Telugu</small><div lang="te"><span class="a">కార్ట్‌కు జోడించండి</span><span class="z">మీ సైజ్ ఎంచుకోండి</span></div></div>
+        </div>
+      </div>
+      <ul class="facts">
+        <li><strong>Feel</strong><span>Friendly, modern, clean. Fits the minimal Cocoa and Mist look.</span></li>
+        <li><strong>Why</strong><span>One family for everything, so the Latin text and Noto scripts stay evenly weighted.</span></li>
+        <li><strong>Risk</strong><span>Less sporty than Sora. Quiet personality.</span></li>
+      </ul>
+    </article>
+
+    <article class="opt f2">
+      <div class="head"><span class="tag">Pairing 2</span></div>
+      <p class="pairs"><b>Sora</b> for headings, <b>DM Sans</b> for body, <b>Noto Sans</b> for the Indian scripts.</p>
+      <div>
+        <p class="sec">Type scale</p>
+        <div class="scale">
+          <div class="row"><small>Display 30</small><div class="h d1">Find your fit</div></div>
+          <div class="row"><small>Title 20</small><div class="t d2">Nike Air Jordan 1 Red and Black</div></div>
+          <div class="row"><small>Body 15</small><div class="b d3">Lightweight cushioning and a grippy outsole for everyday wear. Ships in one week.</div></div>
+          <div class="row"><small>Caption 12</small><div class="c d4">Only 2 left in UK 9 · Free returns within 30 days</div></div>
+          <div class="row"><small>Price 20</small><div class="b d5">₹12,499<s>₹12,999</s></div></div>
+        </div>
+      </div>
+      <div>
+        <p class="sec">Product card</p>
+        <div class="pcard">
+          <div class="pshot"><svg viewBox="0 0 100 62" aria-hidden="true"><path d="M8 50c0-6 6-8 12-10l16-17c4-4 10-2 14 2l8 8c8 2 26 4 34 10 4 3 4 8 0 10H12z" fill="var(--accent)"/><path d="M8 50h84v6c0 2-2 3-4 3H12c-2 0-4-1-4-3z" fill="var(--fg)"/></svg></div>
+          <div><div class="pbrand">Nike</div><div class="pname">Air Jordan 1 Red and Black</div></div>
+          <div class="pprice"><b>₹12,499</b><s>₹12,999</s><span>4% off</span></div>
+          <span class="pbtn">Add to cart</span>
+        </div>
+      </div>
+      <div>
+        <p class="sec">Same UI text in 6 languages</p>
+        <div class="langs">
+          <div class="lr"><small>English</small><div><span class="a">Add to cart</span><span class="z">Choose your size</span></div></div>
+          <div class="lr"><small>Hindi</small><div lang="hi"><span class="a">कार्ट में जोड़ें</span><span class="z">अपना साइज़ चुनें</span></div></div>
+          <div class="lr"><small>Marathi</small><div lang="mr"><span class="a">कार्टमध्ये जोडा</span><span class="z">तुमचा साईज निवडा</span></div></div>
+          <div class="lr"><small>Gujarati</small><div lang="gu"><span class="a">કાર્ટમાં ઉમેરો</span><span class="z">તમારી સાઇઝ પસંદ કરો</span></div></div>
+          <div class="lr"><small>Tamil</small><div lang="ta"><span class="a">கார்ட்டில் சேர்</span><span class="z">உங்கள் அளவைத் தேர்ந்தெடுங்கள்</span></div></div>
+          <div class="lr"><small>Telugu</small><div lang="te"><span class="a">కార్ట్‌కు జోడించండి</span><span class="z">మీ సైజ్ ఎంచుకోండి</span></div></div>
+        </div>
+      </div>
+      <ul class="facts">
+        <li><strong>Feel</strong><span>Technical, sporty headings with a soft, readable body.</span></li>
+        <li><strong>Why</strong><span>Stronger sneaker-brand character on titles and prices.</span></li>
+        <li><strong>Risk</strong><span>Two Latin families to load and maintain. Sora is wide, so long Indic titles wrap sooner.</span></li>
+      </ul>
+    </article>
+
+    <article class="opt f3">
+      <div class="head"><span class="tag">Pairing 3</span></div>
+      <p class="pairs"><b>Poppins</b> for headings and body, <b>Noto Sans</b> for Gujarati, Tamil and Telugu. Poppins covers Devanagari itself.</p>
+      <div>
+        <p class="sec">Type scale</p>
+        <div class="scale">
+          <div class="row"><small>Display 30</small><div class="h d1">Find your fit</div></div>
+          <div class="row"><small>Title 20</small><div class="t d2">Nike Air Jordan 1 Red and Black</div></div>
+          <div class="row"><small>Body 15</small><div class="b d3">Lightweight cushioning and a grippy outsole for everyday wear. Ships in one week.</div></div>
+          <div class="row"><small>Caption 12</small><div class="c d4">Only 2 left in UK 9 · Free returns within 30 days</div></div>
+          <div class="row"><small>Price 20</small><div class="b d5">₹12,499<s>₹12,999</s></div></div>
+        </div>
+      </div>
+      <div>
+        <p class="sec">Product card</p>
+        <div class="pcard">
+          <div class="pshot"><svg viewBox="0 0 100 62" aria-hidden="true"><path d="M8 50c0-6 6-8 12-10l16-17c4-4 10-2 14 2l8 8c8 2 26 4 34 10 4 3 4 8 0 10H12z" fill="var(--accent)"/><path d="M8 50h84v6c0 2-2 3-4 3H12c-2 0-4-1-4-3z" fill="var(--fg)"/></svg></div>
+          <div><div class="pbrand">Nike</div><div class="pname">Air Jordan 1 Red and Black</div></div>
+          <div class="pprice"><b>₹12,499</b><s>₹12,999</s><span>4% off</span></div>
+          <span class="pbtn">Add to cart</span>
+        </div>
+      </div>
+      <div>
+        <p class="sec">Same UI text in 6 languages</p>
+        <div class="langs">
+          <div class="lr"><small>English</small><div><span class="a">Add to cart</span><span class="z">Choose your size</span></div></div>
+          <div class="lr"><small>Hindi</small><div lang="hi"><span class="a">कार्ट में जोड़ें</span><span class="z">अपना साइज़ चुनें</span></div></div>
+          <div class="lr"><small>Marathi</small><div lang="mr"><span class="a">कार्टमध्ये जोडा</span><span class="z">तुमचा साईज निवडा</span></div></div>
+          <div class="lr"><small>Gujarati</small><div lang="gu"><span class="a">કાર્ટમાં ઉમેરો</span><span class="z">તમારી સાઇઝ પસંદ કરો</span></div></div>
+          <div class="lr"><small>Tamil</small><div lang="ta"><span class="a">கார்ட்டில் சேர்</span><span class="z">உங்கள் அளவைத் தேர்ந்தெடுங்கள்</span></div></div>
+          <div class="lr"><small>Telugu</small><div lang="te"><span class="a">కార్ట్‌కు జోడించండి</span><span class="z">మీ సైజ్ ఎంచుకోండి</span></div></div>
+        </div>
+      </div>
+      <ul class="facts">
+        <li><strong>Feel</strong><span>Round, friendly and very familiar from Indian shopping apps.</span></li>
+        <li><strong>Why</strong><span>Hindi and Marathi match the Latin text exactly.</span></li>
+        <li><strong>Risk</strong><span>Most generic of the three. Gujarati, Tamil and Telugu still use Noto Sans, so the mix is uneven.</span></li>
+      </ul>
+    </article>
+
+    <article class="opt f4">
+      <div class="head"><span class="tag">Pairing 4</span><span class="pill">Nike-style</span></div>
+      <p class="pairs"><b>Barlow Condensed</b> for headlines, <b>Archivo</b> for body, <b>Noto Sans</b> for the Indian scripts. Free stand-ins for Nike's condensed Futura and Helvetica Now.</p>
+      <div>
+        <p class="sec">Type scale</p>
+        <div class="scale">
+          <div class="row"><small>Display 36</small><div class="h d1">Find your fit</div></div>
+          <div class="row"><small>Title 22</small><div class="t d2">Nike Air Jordan 1 Red and Black</div></div>
+          <div class="row"><small>Body 15</small><div class="b d3">Lightweight cushioning and a grippy outsole for everyday wear. Ships in one week.</div></div>
+          <div class="row"><small>Caption 12</small><div class="c d4">Only 2 left in UK 9 · Free returns within 30 days</div></div>
+          <div class="row"><small>Price 20</small><div class="b d5">₹12,499<s>₹12,999</s></div></div>
+        </div>
+      </div>
+      <div>
+        <p class="sec">Product card</p>
+        <div class="pcard">
+          <div class="pshot"><svg viewBox="0 0 100 62" aria-hidden="true"><path d="M8 50c0-6 6-8 12-10l16-17c4-4 10-2 14 2l8 8c8 2 26 4 34 10 4 3 4 8 0 10H12z" fill="var(--accent)"/><path d="M8 50h84v6c0 2-2 3-4 3H12c-2 0-4-1-4-3z" fill="var(--fg)"/></svg></div>
+          <div><div class="pbrand">Nike</div><div class="pname">Air Jordan 1 Red and Black</div></div>
+          <div class="pprice"><b>₹12,499</b><s>₹12,999</s><span>4% off</span></div>
+          <span class="pbtn">Add to cart</span>
+        </div>
+      </div>
+      <div>
+        <p class="sec">Same UI text in 6 languages</p>
+        <div class="langs">
+          <div class="lr"><small>English</small><div><span class="a">Add to cart</span><span class="z">Choose your size</span></div></div>
+          <div class="lr"><small>Hindi</small><div lang="hi"><span class="a">कार्ट में जोड़ें</span><span class="z">अपना साइज़ चुनें</span></div></div>
+          <div class="lr"><small>Marathi</small><div lang="mr"><span class="a">कार्टमध्ये जोडा</span><span class="z">तुमचा साईज निवडा</span></div></div>
+          <div class="lr"><small>Gujarati</small><div lang="gu"><span class="a">કાર્ટમાં ઉમેરો</span><span class="z">તમારી સાઇઝ પસંદ કરો</span></div></div>
+          <div class="lr"><small>Tamil</small><div lang="ta"><span class="a">கார்ட்டில் சேர்</span><span class="z">உங்கள் அளவைத் தேர்ந்தெடுங்கள்</span></div></div>
+          <div class="lr"><small>Telugu</small><div lang="te"><span class="a">కార్ట్‌కు జోడించండి</span><span class="z">మీ సైజ్ ఎంచుకోండి</span></div></div>
+        </div>
+      </div>
+      <ul class="facts">
+        <li><strong>Feel</strong><span>Bold, athletic and punchy. Closest to Nike's own look.</span></li>
+        <li><strong>Why</strong><span>Condensed uppercase headlines give banners and category titles a sports-brand edge.</span></li>
+        <li><strong>Risk</strong><span>The Noto Sans scripts are not condensed, so headlines look wider in the Indian languages than in English. Uppercase applies to English only.</span></li>
+      </ul>
+    </article>
+
+  </div>
+
+  <p class="foot">Sizes shown are the planned app scale: display 30, title 20, body 15, caption 12, price 20. On Android these map to sp units. Uppercase labels are used only for Latin text, because Indian scripts have no uppercase. Fonts load from Google Fonts here and would be bundled in the app.</p>
+</div>

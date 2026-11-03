@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Product detail scrolled, dark</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:1500px;overflow:hidden;background:#131212;color:#F2F0EC;font-family:'Archivo',system-ui,sans-serif;font-size:14px;line-height:1.4;box-sizing:border-box">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.4A4 4 0 0119 10c0 5.6-7 10-7 10z"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></symbol>
+<symbol id="i-return" viewBox="0 0 24 24"><path d="M4 9h11a5 5 0 010 10H8"/><path d="M8 5L4 9l4 4"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+</defs></svg>
+
+<div style="display:flex;flex-direction:column;gap:28px;padding:12px 16px 120px">
+
+<div style="display:flex;align-items:center;justify-content:space-between;height:52px;margin:0 -16px;padding:0 4px;border-bottom:1px solid #302E2E;box-sizing:border-box">
+<div style="display:flex;align-items:center;min-width:0">
+<span style="width:44px;height:44px;display:grid;place-items:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-back"/></svg></span>
+<span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;letter-spacing:.015em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Air Jordan 1 Red and Black</span>
+</div>
+<span style="width:44px;height:44px;display:grid;place-items:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-heart"/></svg></span>
+</div>
+
+<section style="display:flex;flex-direction:column;gap:12px">
+<h2 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;letter-spacing:.02em;text-transform:uppercase">Product details</h2>
+<p style="margin:0;font-size:14.5px;line-height:1.55">The Nike Air Jordan 1 in Red and Black is an iconic basketball sneaker known for its stylish design and high-performance features, making it a favorite among sneaker enthusiasts and athletes.</p>
+<div style="display:flex;flex-direction:column;border-top:1px solid #302E2E">
+<sc-for list="{{specs}}" as="s" hint-placeholder-count="5">
+<div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #302E2E;font-size:14px"><span style="color:#A19C94">{{s.k}}</span><span style="font-weight:600;font-variant-numeric:tabular-nums">{{s.v}}</span></div>
+</sc-for>
+</div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:14px">
+<h2 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;letter-spacing:.02em;text-transform:uppercase">Fit and comfort</h2>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;flex-direction:column;gap:5px"><div style="display:flex;justify-content:space-between;font-size:13.5px"><span>Runs small</span><span style="font-weight:600">8%</span></div><div style="height:8px;border-radius:4px;background:#262524"><div style="width:8%;height:8px;border-radius:4px;background:#6E6455"></div></div></div>
+<div style="display:flex;flex-direction:column;gap:5px"><div style="display:flex;justify-content:space-between;font-size:13.5px"><span style="font-weight:700">True to size</span><span style="font-weight:700">82%</span></div><div style="height:8px;border-radius:4px;background:#262524"><div style="width:82%;height:8px;border-radius:4px;background:#C9B79A"></div></div></div>
+<div style="display:flex;flex-direction:column;gap:5px"><div style="display:flex;justify-content:space-between;font-size:13.5px"><span>Runs large</span><span style="font-weight:600">10%</span></div><div style="height:8px;border-radius:4px;background:#262524"><div style="width:10%;height:8px;border-radius:4px;background:#6E6455"></div></div></div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-radius:12px;background:#1F1E1E"><span style="font-size:14px;font-weight:600">Comfort</span><span style="display:flex;align-items:center;gap:6px;font-size:14px;font-weight:700"><svg width="16" height="16" viewBox="0 0 24 24" style="color:#C9B79A" aria-hidden="true"><use href="#i-star"/></svg>4.6 / 5</span></div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;align-items:baseline;justify-content:space-between"><h2 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;letter-spacing:.02em;text-transform:uppercase">Reviews</h2><span style="font-size:13px;color:#A19C94">126 reviews</span></div>
+<div style="display:flex;align-items:center;gap:14px"><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:52px;line-height:1">4.8</span>
+<div style="display:flex;flex-direction:column;gap:2px"><div style="display:flex;gap:2px;color:#C9B79A"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></div><span style="font-size:12.5px;color:#A19C94">Based on 126 verified purchases</span></div></div>
+
+<sc-for list="{{reviews}}" as="r" hint-placeholder-count="2">
+<div style="display:flex;flex-direction:column;gap:8px;padding:14px;border-radius:14px;background:#1F1E1E">
+<div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:14px;font-weight:700">{{r.name}}</span><span style="display:flex;align-items:center;gap:4px;font-size:12px;color:#C9B79A;font-weight:600"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg>Verified buyer</span></div>
+<div style="display:flex;gap:2px;color:#C9B79A"><sc-for list="{{r.stars}}" as="s" hint-placeholder-count="5"><svg width="15" height="15" viewBox="0 0 24 24" style="opacity:{{s}}" aria-hidden="true"><use href="#i-star"/></svg></sc-for></div>
+<span style="font-size:14px;line-height:1.5">{{r.text}}</span>
+<span style="align-self:flex-start;height:24px;padding:0 10px;border-radius:12px;background:#131212;font-size:12px;font-weight:600;display:grid;place-items:center">{{r.fit}}</span>
+</div>
+</sc-for>
+<div style="height:48px;border:1.5px solid #F2F0EC;border-radius:12px;font-size:14.5px;font-weight:600;display:grid;place-items:center;box-sizing:border-box">See all 126 reviews</div>
+</section>
+
+<section style="display:flex;align-items:center;gap:12px;padding:14px;border-radius:14px;border:1px solid #302E2E">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9B79A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-return"/></svg>
+<div style="display:flex;flex-direction:column;gap:1px"><span style="font-size:14px;font-weight:700">30-day easy returns</span><span style="font-size:13px;color:#A19C94">Free size exchange if it doesn't fit</span></div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:12px">
+<h2 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;letter-spacing:.02em;text-transform:uppercase">Similar shoes</h2>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+<sc-for list="{{products}}" as="p" hint-placeholder-count="2">
+<div style="display:flex;flex-direction:column;gap:8px;min-width:0">
+<div style="height:140px;border-radius:16px;background:{{p.bg}};display:grid;place-items:center;overflow:hidden">
+<svg viewBox="0 0 100 62" style="width:80%;height:auto" aria-hidden="true"><path d="M6 48c0-6 6-8 12-10l16-17c4-4 10-2 14 2l8 8c8 2 28 4 36 10 4 3 4 8 0 10H10z" fill="{{p.body}}"/><path d="M30 43c14-6 34-6 52 0" fill="none" stroke="{{p.stripe}}" stroke-width="3" stroke-linecap="round"/><path d="M6 48h88v7c0 2-2 3-4 3H10c-2 0-4-1-4-3z" fill="{{p.sole}}"/><path d="M36 22l7 8M44 24l7 8" stroke="{{p.stripe}}" stroke-width="2.2" stroke-linecap="round"/></svg>
+</div>
+<div style="display:flex;flex-direction:column;gap:2px;min-width:0">
+<span style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#A19C94">{{p.brand}}</span>
+<span style="font-size:14px;font-weight:600;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{p.name}}</span>
+<span style="font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px">{{p.price}}</span>
+</div>
+</div>
+</sc-for>
+</div>
+</section>
+
+</div>
+
+<div style="position:absolute;left:0;right:0;bottom:0;height:84px;background:#131212;border-top:1px solid #302E2E;display:flex;gap:10px;padding:12px 16px 20px;box-sizing:border-box">
+<div style="flex:1;height:52px;border:1.5px solid #F2F0EC;border-radius:12px;font-size:15px;font-weight:600;display:grid;place-items:center;box-sizing:border-box">Add to cart</div>
+<div style="flex:1;height:52px;border-radius:12px;background:#C9B79A;color:#131212;font-size:15px;font-weight:700;display:grid;place-items:center">Buy now</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1500}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      specs: [
+        { k: 'Brand', v: 'Nike' }, { k: 'Category', v: "Men's sneakers" }, { k: 'Warranty', v: '1 year' }, { k: 'Ships in', v: '1 week' }, { k: 'SKU', v: 'MEN-NIK-NIK-088' }
+      ],
+      reviews: [
+        { name: 'Elena Long', stars: [1, 1, 1, 1, 1], text: 'Highly impressed!', fit: 'True to size · bought UK 9' },
+        { name: 'Addison Wright', stars: [1, 1, 1, 1, 0.3], text: 'Very happy with my purchase!', fit: 'Runs small · bought UK 8' }
+      ],
+      products: [
+        { name: 'Nike Baseball Cleats', brand: 'Nike', price: '₹6,799', bg: '#2A2A2A', body: '#F2F0EC', sole: '#131212', stripe: '#9BB3BE' },
+        { name: 'Puma Future Rider Trainers', brand: 'Puma', price: '₹7,599', bg: '#3E382F', body: '#F2F0EC', sole: '#131212', stripe: '#C9B79A' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

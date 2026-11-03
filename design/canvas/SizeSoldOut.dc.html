@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Out-of-stock size</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<style>
+body{margin:0}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:844px;overflow:hidden;background:#FBFBFB;color:#131212;font-family:'Archivo',system-ui,sans-serif;font-size:14px;line-height:1.4;box-sizing:border-box">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.4A4 4 0 0119 10c0 5.6-7 10-7 10z"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 0112 0v5l1.5 2h-15z"/><path d="M10 21h4"/></symbol>
+</defs></svg>
+
+<div style="position:absolute;left:0;right:0;top:0;height:330px;background:#9BB3BE;overflow:hidden">
+<svg viewBox="0 0 100 62" style="position:absolute;left:40px;top:56px;width:310px;height:auto" role="img" aria-label="Sneaker"><path d="M6 48c0-6 6-8 12-10l16-17c4-4 10-2 14 2l8 8c8 2 28 4 36 10 4 3 4 8 0 10H10z" fill="#8C2F23"/><path d="M30 43c14-6 34-6 52 0" fill="none" stroke="#131212" stroke-width="3" stroke-linecap="round"/><path d="M6 48h88v7c0 2-2 3-4 3H10c-2 0-4-1-4-3z" fill="#131212"/><path d="M36 22l7 8M44 24l7 8" stroke="#131212" stroke-width="2.2" stroke-linecap="round"/></svg>
+</div>
+<a href="ProductDetail.dc.html" aria-label="Back" style="position:absolute;left:12px;top:12px;width:44px;height:44px;border-radius:50%;background:#FBFBFB;color:#131212;display:grid;place-items:center;text-decoration:none"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-back"/></svg></a>
+<button aria-label="Add to wishlist" style="position:absolute;right:12px;top:12px;width:44px;height:44px;border-radius:50%;border:0;background:#FBFBFB;color:#131212;display:grid;place-items:center;cursor:pointer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-heart"/></svg></button>
+
+<div style="position:absolute;left:0;right:0;top:300px;bottom:0;background:#FBFBFB;border-radius:24px 24px 0 0;padding:20px 16px 0;box-sizing:border-box;display:flex;flex-direction:column;gap:14px;overflow:hidden">
+<div style="display:flex;flex-direction:column;gap:6px">
+<span style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6B6B66">Nike · Men's sneakers</span>
+<h1 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:34px;line-height:1;letter-spacing:.01em;text-transform:uppercase">Air Jordan 1 Red and Black</h1>
+</div>
+<div style="display:flex;align-items:baseline;gap:10px"><span style="font-size:28px;font-weight:700;font-variant-numeric:tabular-nums">₹12,499</span><s style="font-size:15px;color:#6B6B66">₹12,999</s><span style="font-size:14px;font-weight:700;color:#B4472F">4% off</span></div>
+
+<div style="display:flex;flex-direction:column;gap:8px">
+<span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B6B66">Select size (UK)</span>
+<div style="display:flex;gap:8px">
+<button style="width:50px;height:44px;border:1px solid #D4D5D2;border-radius:10px;background:#FBFBFB;color:#131212;font-size:15px;font-weight:600;cursor:pointer">6</button>
+<button style="width:50px;height:44px;border:1px solid #D4D5D2;border-radius:10px;background:#FBFBFB;color:#131212;font-size:15px;font-weight:600;cursor:pointer">7</button>
+<button style="width:50px;height:44px;border:2px dashed #68513F;border-radius:10px;background:#EEEEEC;color:#6B6B66;font-size:15px;font-weight:700;cursor:pointer;text-decoration:line-through" aria-pressed="true" aria-label="UK 8, out of stock, selected">8</button>
+<button style="width:50px;height:44px;border:1px solid #D4D5D2;border-radius:10px;background:#FBFBFB;color:#131212;font-size:15px;font-weight:600;cursor:pointer">9</button>
+<button style="width:50px;height:44px;border:1px solid #D4D5D2;border-radius:10px;background:#FBFBFB;color:#131212;font-size:15px;font-weight:600;cursor:pointer">10</button>
+<button style="width:50px;height:44px;border:1px solid #D4D5D2;border-radius:10px;background:#FBFBFB;color:#131212;font-size:15px;font-weight:600;cursor:pointer">11</button>
+</div>
+</div>
+
+<div style="display:flex;align-items:flex-start;gap:12px;padding:14px;border-radius:12px;background:#F4DDD7">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8F2F1B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px" aria-hidden="true"><use href="#i-bell"/></svg>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:14.5px;font-weight:700;color:#7A2616">UK 8 is out of stock</span><span style="font-size:13px;line-height:1.45;color:#131212">Get a notification when it's back. Other sizes can be added to your cart now.</span></div>
+</div>
+</div>
+
+<div style="position:absolute;left:0;right:0;bottom:0;height:84px;background:#FBFBFB;border-top:1px solid #D4D5D2;padding:12px 16px 20px;box-sizing:border-box">
+<a href="NotifyDone.dc.html" style="width:100%;height:52px;border-radius:12px;background:#68513F;color:#FFFFFF;display:flex;align-items:center;justify-content:center;gap:10px;font-size:15px;font-weight:700;text-decoration:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-bell"/></svg>Notify me when UK 8 is back</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

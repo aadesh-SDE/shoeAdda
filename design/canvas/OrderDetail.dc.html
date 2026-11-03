@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Order details</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<style>
+body{margin:0}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:1180px;overflow:hidden;background:#FBFBFB;color:#131212;font-family:'Archivo',system-ui,sans-serif;font-size:14px;line-height:1.4;box-sizing:border-box">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+</defs></svg>
+
+<div style="display:flex;flex-direction:column;gap:22px;padding:12px 0 120px">
+
+<div style="display:flex;align-items:center;height:52px;padding:0 4px;border-bottom:1px solid #D4D5D2;box-sizing:border-box">
+<a href="Orders.dc.html" aria-label="Back" style="width:44px;height:44px;color:#131212;display:grid;place-items:center;text-decoration:none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-back"/></svg></a>
+<h1 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;line-height:1;letter-spacing:.015em;text-transform:uppercase">Order details</h1>
+</div>
+
+<div style="display:flex;align-items:center;justify-content:space-between;padding:0 16px">
+<div style="display:flex;flex-direction:column"><span style="font-size:17px;font-weight:700;font-variant-numeric:tabular-nums">SA-1102-0231</span><span style="font-size:13px;color:#6B6B66">Placed 2 Nov, 9:41 PM</span></div>
+<span style="height:28px;padding:0 14px;border-radius:14px;background:#E9E0D6;color:#68513F;font-size:12.5px;font-weight:700;display:grid;place-items:center">Packed</span>
+</div>
+
+<section style="display:flex;flex-direction:column;padding:0 16px">
+<h2 style="margin:0 0 14px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;letter-spacing:.02em;text-transform:uppercase">Order status</h2>
+
+<div style="display:flex;gap:14px;min-height:62px">
+<div style="display:flex;flex-direction:column;align-items:center"><span style="width:24px;height:24px;border-radius:50%;background:#68513F;color:#FFFFFF;display:grid;place-items:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span style="flex:1;width:3px;background:#68513F"></span></div>
+<div style="display:flex;flex-direction:column;padding-bottom:14px"><span style="font-size:15px;font-weight:700">Placed</span><span style="font-size:13px;color:#6B6B66">2 Nov, 9:41 PM</span></div>
+</div>
+<div style="display:flex;gap:14px;min-height:78px">
+<div style="display:flex;flex-direction:column;align-items:center"><span style="width:24px;height:24px;border-radius:50%;background:#FBFBFB;border:3px solid #68513F;box-sizing:border-box;display:grid;place-items:center"><span style="width:8px;height:8px;border-radius:50%;background:#68513F"></span></span><span style="flex:1;width:3px;background:#D4D5D2"></span></div>
+<div style="display:flex;flex-direction:column;gap:2px;padding-bottom:14px"><span style="font-size:15px;font-weight:700">Packed</span><span style="font-size:13px;color:#6B6B66">3 Nov, 10:15 AM</span><span style="font-size:13px;color:#131212">Your order is packed and ready to ship.</span></div>
+</div>
+<div style="display:flex;gap:14px;min-height:62px">
+<div style="display:flex;flex-direction:column;align-items:center"><span style="width:24px;height:24px;border-radius:50%;background:#FBFBFB;border:3px solid #D4D5D2;box-sizing:border-box"></span><span style="flex:1;width:3px;background:#D4D5D2"></span></div>
+<div style="display:flex;flex-direction:column;padding-bottom:14px"><span style="font-size:15px;font-weight:600;color:#6B6B66">Shipped</span><span style="font-size:13px;color:#6B6B66">Expected 4 Nov</span></div>
+</div>
+<div style="display:flex;gap:14px;min-height:62px">
+<div style="display:flex;flex-direction:column;align-items:center"><span style="width:24px;height:24px;border-radius:50%;background:#FBFBFB;border:3px solid #D4D5D2;box-sizing:border-box"></span><span style="flex:1;width:3px;background:#D4D5D2"></span></div>
+<div style="display:flex;flex-direction:column;padding-bottom:14px"><span style="font-size:15px;font-weight:600;color:#6B6B66">Out for delivery</span><span style="font-size:13px;color:#6B6B66">Expected 6 Nov</span></div>
+</div>
+<div style="display:flex;gap:14px">
+<div style="display:flex;flex-direction:column;align-items:center"><span style="width:24px;height:24px;border-radius:50%;background:#FBFBFB;border:3px solid #D4D5D2;box-sizing:border-box"></span></div>
+<div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:600;color:#6B6B66">Delivered</span><span style="font-size:13px;color:#6B6B66">Expected Fri, 6 Nov</span></div>
+</div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:12px;padding:0 16px">
+<h2 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;letter-spacing:.02em;text-transform:uppercase">Items</h2>
+<sc-for list="{{items}}" as="p" hint-placeholder-count="2">
+<div style="display:flex;gap:12px;align-items:center;padding:12px;border:1px solid #D4D5D2;border-radius:14px">
+<span style="flex:none;width:64px;height:64px;border-radius:12px;background:{{p.bg}};display:grid;place-items:center"><svg viewBox="0 0 100 62" style="width:80%;height:auto" aria-hidden="true"><path d="M6 48c0-6 6-8 12-10l16-17c4-4 10-2 14 2l8 8c8 2 28 4 36 10 4 3 4 8 0 10H10z" fill="{{p.body}}"/><path d="M6 48h88v7c0 2-2 3-4 3H10c-2 0-4-1-4-3z" fill="#131212"/></svg></span>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:1px"><span style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6B6B66">{{p.brand}}</span><span style="font-size:14px;font-weight:600;line-height:1.3">{{p.name}}</span><span style="font-size:12.5px;color:#6B6B66">Size UK 9 · Qty 1</span></div>
+<span style="flex:none;font-size:15px;font-weight:700;font-variant-numeric:tabular-nums">{{p.price}}</span>
+</div>
+</sc-for>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:8px;padding:0 16px">
+<h2 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;letter-spacing:.02em;text-transform:uppercase">Delivery address</h2>
+<div style="display:flex;flex-direction:column;gap:3px;padding:14px;border-radius:14px;background:#EEEEEC"><span style="font-size:14.5px;font-weight:700">Amit Kulkarni</span><span style="font-size:13.5px;line-height:1.5">Flat 402, Sunrise Apartments, Baner Road, Pune, Maharashtra 411045</span><span style="font-size:13.5px;color:#6B6B66;font-variant-numeric:tabular-nums">+91 98765 43210</span></div>
+</section>
+
+<section style="display:flex;flex-direction:column;gap:8px;padding:0 16px">
+<h2 style="margin:0 0 4px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;letter-spacing:.02em;text-transform:uppercase">Payment</h2>
+<div style="display:flex;justify-content:space-between;font-size:14px"><span>Subtotal (2 items)</span><span style="font-variant-numeric:tabular-nums">₹20,098</span></div>
+<div style="display:flex;justify-content:space-between;font-size:14px"><span>Coupon WELCOME10</span><span style="font-variant-numeric:tabular-nums;color:#68513F;font-weight:600">−₹2,010</span></div>
+<div style="display:flex;justify-content:space-between;font-size:14px"><span>Delivery</span><span style="font-weight:600;color:#68513F">Free</span></div>
+<div style="display:flex;justify-content:space-between;font-size:16px;font-weight:700;padding-top:10px;border-top:1px solid #D4D5D2"><span>Total paid via UPI</span><span style="font-variant-numeric:tabular-nums">₹18,088</span></div>
+<span style="font-size:12.5px;color:#6B6B66;margin-top:4px">Size exchange and returns open after delivery, for 30 days.</span>
+</section>
+
+</div>
+
+<div style="position:absolute;left:0;right:0;bottom:0;height:84px;background:#FBFBFB;border-top:1px solid #D4D5D2;display:flex;gap:10px;padding:12px 16px 20px;box-sizing:border-box">
+<a href="CancelSheet.dc.html" style="flex:1;height:52px;border:1.5px solid #B4472F;border-radius:12px;color:#B4472F;font-size:15px;font-weight:600;display:grid;place-items:center;text-decoration:none;box-sizing:border-box">Cancel order</a>
+<a href="Help.dc.html" style="flex:1;height:52px;border-radius:12px;background:#68513F;color:#FFFFFF;font-size:15px;font-weight:700;display:grid;place-items:center;text-decoration:none">Get help</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1180}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      items: [
+        { name: 'Air Jordan 1 Red and Black', brand: 'Nike', price: '₹12,499', bg: '#9BB3BE', body: '#8C2F23' },
+        { name: 'Puma Future Rider Trainers', brand: 'Puma', price: '₹7,599', bg: '#A5967C', body: '#FBFBFB' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

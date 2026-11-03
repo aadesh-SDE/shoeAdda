@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<style>
+body{margin:0}
+button,input{font-family:inherit}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:844px;overflow:hidden;background:#FBFBFB;color:#131212;font-family:'Archivo',system-ui,sans-serif;font-size:14px;line-height:1.4;box-sizing:border-box">
+
+<div style="position:relative;height:250px;background:#9BB3BE;overflow:hidden">
+<div style="position:absolute;right:-70px;top:-60px;width:260px;height:260px;border-radius:50%;background:#A9BEC8" aria-hidden="true"></div>
+<svg viewBox="0 0 100 62" style="position:absolute;left:50%;top:84px;width:270px;height:auto;margin-left:-135px;transform:rotate(-6deg)" aria-hidden="true"><path d="M6 48c0-6 6-8 12-10l16-17c4-4 10-2 14 2l8 8c8 2 28 4 36 10 4 3 4 8 0 10H10z" fill="#8C2F23"/><path d="M30 43c14-6 34-6 52 0" fill="none" stroke="#131212" stroke-width="3" stroke-linecap="round"/><path d="M6 48h88v7c0 2-2 3-4 3H10c-2 0-4-1-4-3z" fill="#131212"/><path d="M36 22l7 8M44 24l7 8" stroke="#131212" stroke-width="2.2" stroke-linecap="round"/></svg>
+<div style="position:absolute;left:16px;top:20px;display:flex;align-items:center;gap:8px">
+<svg width="30" height="30" viewBox="0 0 120 120" role="img" aria-label="ShoeAdda"><rect width="120" height="120" rx="28" fill="#68513F"/><g transform="translate(13 28) scale(1.12)"><path d="M8 50c0-6 6-8 12-10l16-17c4-4 10-2 14 2l8 8c8 2 26 4 34 10 4 3 4 8 0 10H12z" fill="#FBFBFB"/><path d="M8 50h84v6c0 2-2 3-4 3H12c-2 0-4-1-4-3z" fill="#A5967C"/><path d="M38 24l7 8M46 26l7 8" stroke="#68513F" stroke-width="2.4" stroke-linecap="round"/></g></svg>
+<span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;letter-spacing:.015em;text-transform:uppercase;line-height:1">Shoe<span style="color:#68513F">Adda</span></span>
+</div>
+</div>
+
+<div style="position:absolute;left:0;right:0;top:226px;bottom:0;background:#FBFBFB;border-radius:24px 24px 0 0;padding:28px 16px 0;box-sizing:border-box;display:flex;flex-direction:column;gap:16px">
+
+<div style="display:flex;flex-direction:column;gap:6px">
+<h1 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:38px;line-height:1;text-transform:uppercase;letter-spacing:.01em">Log in or sign up</h1>
+<p style="margin:0;font-size:14.5px;color:#6B6B66">Enter your phone number and we'll send a code.</p>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:8px">
+<label for="phone" style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B6B66">Phone number</label>
+<div style="display:flex;gap:8px">
+<span style="flex:none;height:52px;padding:0 14px;border:1px solid #D4D5D2;border-radius:12px;background:#EEEEEC;display:grid;place-items:center;font-size:16px;font-weight:700">+91</span>
+<input id="phone" type="tel" inputmode="numeric" value="98765 43210" style="flex:1;min-width:0;height:52px;border:1.5px solid #131212;border-radius:12px;background:#FBFBFB;color:#131212;font-size:18px;font-weight:600;padding:0 14px;box-sizing:border-box;font-variant-numeric:tabular-nums">
+</div>
+</div>
+
+<a href="Otp.dc.html" style="display:grid;place-items:center;height:52px;border-radius:12px;background:#68513F;color:#FFFFFF;font-size:15px;font-weight:700;text-decoration:none">Continue</a>
+
+<div style="display:flex;align-items:center;gap:12px;color:#6B6B66;font-size:12.5px"><span style="flex:1;height:1px;background:#D4D5D2"></span>or<span style="flex:1;height:1px;background:#D4D5D2"></span></div>
+
+<button style="height:52px;border:1.5px solid #131212;border-radius:12px;background:transparent;color:#131212;display:flex;align-items:center;justify-content:center;gap:10px;font-size:15px;font-weight:600;cursor:pointer"><span style="width:24px;height:24px;border-radius:50%;background:#EEEEEC;display:grid;place-items:center;font-size:13px;font-weight:700" aria-hidden="true">G</span>Continue with Google</button>
+
+<a href="Main.dc.html" style="align-self:center;display:grid;place-items:center;min-height:44px;font-size:14.5px;font-weight:600;color:#68513F;text-decoration:none">Continue as guest</a>
+
+<p style="margin:auto 0 24px;text-align:center;font-size:12px;line-height:1.5;color:#6B6B66">By continuing you agree to our Terms of Use and Privacy Policy.</p>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

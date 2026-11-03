@@ -1,0 +1,257 @@
+<title>ShoeAdda Color Options</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: four natural palettes in a responsive grid, each with a live phone preview, role swatches and contrast notes. Light/dark toggle switches the previews. */
+:root{
+  --bg:#F6F6F4; --card:#FFFFFF; --fg:#151515; --muted:#62625E; --line:#E1E1DB; --chip:#EDEDE8;
+  --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'Plus Jakarta Sans','Segoe UI',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#111113;--card:#1A1A1D;--fg:#F2F2EE;--muted:#A3A39D;--line:#2C2C30;--chip:#26262A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111113;--card:#1A1A1D;--fg:#F2F2EE;--muted:#A3A39D;--line:#2C2C30;--chip:#26262A;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5;
+  padding-block:32px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1320px;margin:0 auto}
+h1{font-family:var(--display);font-size:clamp(28px,5vw,42px);line-height:1.1;margin:0 0 8px;text-wrap:balance;letter-spacing:-.01em}
+.lead{color:var(--muted);max-width:64ch;margin:0 0 20px}
+.bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:24px}
+.seg{display:inline-flex;background:var(--chip);border-radius:10px;padding:3px;gap:2px}
+.seg button{font:inherit;font-weight:600;font-size:13px;border:0;background:transparent;color:var(--muted);padding:7px 14px;border-radius:8px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--card);color:var(--fg);box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.seg button:focus-visible,.sw:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.note{font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px;align-items:start}
+.opt{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:18px;min-width:0}
+.opt-head{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;justify-content:space-between}
+.tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.pill{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--fg);color:var(--bg);padding:3px 9px;border-radius:99px}
+.opt h2{font-family:var(--display);font-size:24px;line-height:1.15;margin:2px 0 4px}
+.feel{color:var(--muted);margin:0;font-size:14px}
+
+/* phone preview, driven by per-option tokens */
+.p-light{--p-bg:var(--l-bg);--p-surface:var(--l-surface);--p-text:var(--l-text);--p-accent:var(--l-accent);--p-on:var(--l-on);--p-sale:var(--l-sale);--p-muted:var(--l-muted);--p-line:var(--l-line)}
+.p-dark{--p-bg:var(--d-bg);--p-surface:var(--d-surface);--p-text:var(--d-text);--p-accent:var(--d-accent);--p-on:var(--d-on);--p-sale:var(--d-sale);--p-muted:var(--d-muted);--p-line:var(--d-line)}
+.p-light{--p-btn:var(--l-btn,var(--l-accent));--p-btnon:var(--l-btnon,var(--l-on));--p-soft:var(--l-soft,var(--l-bg))}
+.p-dark{--p-btn:var(--d-btn,var(--d-accent));--p-btnon:var(--d-btnon,var(--d-on));--p-soft:var(--d-soft,var(--d-bg))}
+.optA{--l-bg:#F3F2EC;--l-surface:#E7E5DA;--l-text:#1F2A22;--l-accent:#3F6B4F;--l-on:#FFFFFF;--l-sale:#B4472F;--l-muted:#6A6F66;--l-line:#D9D7CA;
+      --d-bg:#121612;--d-surface:#1C221D;--d-text:#ECEFE6;--d-accent:#8DBF9B;--d-on:#101410;--d-sale:#E58A72;--d-muted:#9AA298;--d-line:#2B332D}
+.optB{--l-bg:#FAF6F0;--l-surface:#EEE5D9;--l-text:#2B2118;--l-accent:#9A4A2E;--l-on:#FFFFFF;--l-sale:#B3261E;--l-muted:#74685C;--l-line:#E3D8C9;
+      --d-bg:#1A1411;--d-surface:#261E19;--d-text:#F3EBE2;--d-accent:#E0916B;--d-on:#1A1411;--d-sale:#FF8A7A;--d-muted:#AC9F92;--d-line:#362C25}
+.optC{--l-bg:#F5F6F2;--l-surface:#E5E9E0;--l-text:#232823;--l-accent:#4F6F5E;--l-on:#FFFFFF;--l-sale:#B4472F;--l-muted:#677068;--l-line:#D8DDD2;
+      --d-bg:#131614;--d-surface:#1E231F;--d-text:#E9EDE7;--d-accent:#9CBBA9;--d-on:#131614;--d-sale:#E58A72;--d-muted:#98A19A;--d-line:#2C332E}
+.optD{--l-bg:#F5F4F0;--l-surface:#E6E8E5;--l-text:#1B2428;--l-accent:#2F6577;--l-on:#FFFFFF;--l-sale:#B4472F;--l-muted:#626B6E;--l-line:#DADCD7;
+      --d-bg:#0F1618;--d-surface:#192225;--d-text:#E8EEF0;--d-accent:#6FB2C8;--d-on:#0F1618;--d-sale:#E58A72;--d-muted:#93A0A4;--d-line:#27333A}
+.optE{--l-bg:#FFFFE3;--l-surface:#F1F1DA;--l-text:#4A4A4A;--l-accent:#6D8196;--l-on:#FFFFFF;--l-btn:#4A4A4A;--l-btnon:#FFFFE3;--l-sale:#B4472F;--l-muted:#6B6B6B;--l-line:#CBCBCB;
+      --d-bg:#1E1F21;--d-surface:#2A2C2F;--d-text:#F2F2E4;--d-accent:#9DB2C7;--d-on:#1E1F21;--d-btn:#F2F2E4;--d-btnon:#1E1F21;--d-sale:#E58A72;--d-muted:#A3A39C;--d-line:#3A3D41}
+.optF{--l-bg:#FBFBFB;--l-surface:#EEEEEC;--l-text:#131212;--l-accent:#68513F;--l-on:#FFFFFF;--l-soft:#9BB3BE;--l-sale:#B4472F;--l-muted:#6B6B66;--l-line:#D4D5D2;
+      --d-bg:#131212;--d-surface:#1F1E1E;--d-text:#F2F0EC;--d-accent:#C9B79A;--d-on:#131212;--d-soft:#2B3A41;--d-sale:#E58A72;--d-muted:#A19C94;--d-line:#302E2E}
+
+.phone{width:100%;max-width:300px;margin:0 auto;border:1px solid var(--line);border-radius:26px;overflow:hidden;background:var(--p-bg);color:var(--p-text);padding:14px;display:flex;flex-direction:column;gap:12px}
+.top{display:flex;align-items:center;justify-content:space-between;font-family:var(--display);font-weight:700;font-size:17px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--p-accent);display:inline-block;margin-right:6px}
+.search{background:var(--p-surface);color:var(--p-muted);border-radius:10px;padding:9px 12px;font-size:12.5px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:11.5px;font-weight:600;padding:5px 10px;border-radius:99px;background:var(--p-surface);color:var(--p-text)}
+.chip.on{background:var(--p-text);color:var(--p-bg)}
+.card{background:var(--p-surface);border-radius:14px;padding:10px;display:flex;flex-direction:column;gap:8px}
+.shot{background:var(--p-soft);border-radius:10px;aspect-ratio:16/10;display:grid;place-items:center;position:relative}
+.shot svg{width:78%;height:auto}
+.heart{position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:50%;background:var(--p-surface);display:grid;place-items:center;color:var(--p-text)}
+.disc{position:absolute;top:8px;left:8px;background:var(--p-sale);color:#fff;font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:6px}
+.brand{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--p-muted)}
+.name{font-weight:600;font-size:13.5px;line-height:1.3}
+.price{display:flex;gap:8px;align-items:baseline;font-variant-numeric:tabular-nums}
+.price b{font-size:16px}
+.price s{font-size:12px;color:var(--p-muted)}
+.price span{font-size:12px;color:var(--p-sale);font-weight:700}
+.sizes{display:flex;gap:5px;flex-wrap:wrap}
+.sz{min-width:30px;text-align:center;font-size:11.5px;font-weight:600;padding:5px 6px;border-radius:8px;border:1px solid var(--p-line);color:var(--p-text)}
+.sz.sel{border-color:var(--p-accent);background:var(--p-btn);color:var(--p-btnon)}
+.sz.off{color:var(--p-muted);text-decoration:line-through;opacity:.55}
+.btn{display:block;text-align:center;font-weight:700;font-size:13.5px;padding:11px;border-radius:12px;background:var(--p-btn);color:var(--p-btnon)}
+.btn.alt{background:transparent;color:var(--p-text);border:1.5px solid var(--p-text)}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.nav{display:flex;justify-content:space-around;border-top:1px solid var(--p-line);padding-top:10px;font-size:10.5px;color:var(--p-muted);font-weight:600}
+.nav .act{color:var(--p-btn)}
+
+.roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin:0;padding:0;list-style:none}
+.sw{display:flex;gap:9px;align-items:center;font:inherit;text-align:left;background:var(--chip);border:0;border-radius:10px;padding:7px 9px;cursor:pointer;color:var(--fg);min-width:0}
+.sw i{width:26px;height:26px;border-radius:7px;border:1px solid var(--line);flex:none}
+.sw span{display:flex;flex-direction:column;line-height:1.2;min-width:0}
+.sw small{color:var(--muted);font-size:11px}
+.sw b{font-size:12px;font-weight:600;font-variant-numeric:tabular-nums}
+.facts{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:13.5px}
+.facts li{display:flex;gap:8px}
+.facts strong{min-width:84px;flex:none;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.foot{margin-top:28px;color:var(--muted);font-size:13px;max-width:70ch}
+</style>
+
+<div class="wrap">
+  <h1>ShoeAdda color options</h1>
+  <p class="lead">Four natural palettes drawn from moss, clay, sage and sea, plus Option E from your four swatches and Option F from the Octet mobile shopping palette. Each keeps a soft earthy base and one accent that is reserved for buttons and selected states, so Add to cart always stands out.</p>
+
+  <div class="bar">
+    <div class="seg" role="group" aria-label="Preview mode">
+      <button type="button" id="m-light" aria-pressed="true">Light preview</button>
+      <button type="button" id="m-dark" aria-pressed="false">Dark preview</button>
+    </div>
+    <span class="note">Tap any swatch to copy its hex code.</span>
+  </div>
+
+  <div class="grid">
+
+    <article class="opt optA">
+      <div class="opt-head"><span class="tag">Option A</span><span class="pill">Recommended</span></div>
+      <div>
+        <h2>Moss and Stone</h2>
+        <p class="feel">Deep moss green on a soft stone base. Outdoorsy and calm, with a clean modern edge.</p>
+      </div>
+      <div class="phone p-light" data-phone></div>
+      <ul class="roles" data-roles></ul>
+      <ul class="facts">
+        <li><strong>Contrast</strong><span>White text on accent 6.1:1. Text on base 13.3:1. Dark mode accent 8.8:1.</span></li>
+        <li><strong>Best for</strong><span>Sneakers, walking and trail shoes. The most "natural" feel of the four.</span></li>
+        <li><strong>Risk</strong><span>Green can read as eco-brand. Sale tags use a clay red to stay distinct.</span></li>
+      </ul>
+    </article>
+
+    <article class="opt optB">
+      <div class="opt-head"><span class="tag">Option B</span></div>
+      <div>
+        <h2>Clay and Oat</h2>
+        <p class="feel">Baked clay accent on a warm oat base. Earthy and friendly, like leather and suede.</p>
+      </div>
+      <div class="phone p-light" data-phone></div>
+      <ul class="roles" data-roles></ul>
+      <ul class="facts">
+        <li><strong>Contrast</strong><span>White text on accent 6.2:1. Text on base 14.6:1. Dark mode accent 7.3:1.</span></li>
+        <li><strong>Best for</strong><span>Leather, formal and casual shoes. Warmest of the four.</span></li>
+        <li><strong>Risk</strong><span>Accent and sale tag are both warm reds. Keep the sale tag small and the accent on buttons only.</span></li>
+      </ul>
+    </article>
+
+    <article class="opt optC">
+      <div class="opt-head"><span class="tag">Option C</span></div>
+      <div>
+        <h2>Sage and Mist</h2>
+        <p class="feel">Muted sage on a pale green-grey base. The quietest option, close to a spa or wellness feel.</p>
+      </div>
+      <div class="phone p-light" data-phone></div>
+      <ul class="roles" data-roles></ul>
+      <ul class="facts">
+        <li><strong>Contrast</strong><span>White text on accent 5.6:1. Text on base 13.8:1. Dark mode accent 8.8:1.</span></li>
+        <li><strong>Best for</strong><span>Comfort and lifestyle shoes, a gentle premium look.</span></li>
+        <li><strong>Risk</strong><span>Lowest energy. The accent is subtler, so buttons need generous size.</span></li>
+      </ul>
+    </article>
+
+    <article class="opt optD">
+      <div class="opt-head"><span class="tag">Option D</span></div>
+      <div>
+        <h2>Sea and Driftwood</h2>
+        <p class="feel">Deep sea blue-teal on a driftwood neutral. Fresh and modern while still drawn from nature.</p>
+      </div>
+      <div class="phone p-light" data-phone></div>
+      <ul class="roles" data-roles></ul>
+      <ul class="facts">
+        <li><strong>Contrast</strong><span>White text on accent 6.5:1. Text on base 14.4:1. Dark mode accent 7.7:1.</span></li>
+        <li><strong>Best for</strong><span>A broad catalog with sports, casual and kids shoes.</span></li>
+        <li><strong>Risk</strong><span>Closest to a standard blue app. Less distinctive than the green and clay options.</span></li>
+      </ul>
+    </article>
+
+    <article class="opt optE">
+      <div class="opt-head"><span class="tag">Option E</span><span class="pill">Your palette</span></div>
+      <div>
+        <h2>Charcoal and Slate</h2>
+        <p class="feel">Your four colors: charcoal #4A4A4A, grey #CBCBCB, butter #FFFFE3 and slate blue #6D8196. Soft, quiet and modern.</p>
+      </div>
+      <div class="phone p-light" data-phone></div>
+      <ul class="roles" data-roles></ul>
+      <ul class="facts">
+        <li><strong>Roles</strong><span>Butter is the background, charcoal is text and buttons, grey is borders and dividers, slate is the accent for selected states and the logo dot. Surface is a slightly darker butter I added.</span></li>
+        <li><strong>Contrast</strong><span>Charcoal on butter 8.7:1. Butter on charcoal 8.7:1. Slate on butter 4.0:1, fine for icons and borders, too low for small text.</span></li>
+        <li><strong>Fix</strong><span>White text on slate is 4.0:1, so buttons use charcoal instead. If you want slate buttons, darken it to #56697D (5.7:1 with white).</span></li>
+        <li><strong>Risk</strong><span>The accent is low-key, so Add to cart relies on the charcoal button. Dark mode here is my own derived version.</span></li>
+      </ul>
+    </article>
+
+    <article class="opt optF">
+      <div class="opt-head"><span class="tag">Option F</span><span class="pill">Octet palette</span></div>
+      <div>
+        <h2>Cocoa and Mist</h2>
+        <p class="feel">From the Octet mobile shopping palette: near-black, cocoa brown, tan, mist blue and soft grey. Earthy and premium.</p>
+      </div>
+      <div class="phone p-light" data-phone></div>
+      <ul class="roles" data-roles></ul>
+      <ul class="facts">
+        <li><strong>Roles</strong><span>#FBFBFB background, #131212 text, #68513F cocoa for buttons and selected states, #9BB3BE mist blue behind product photos, #A5967C tan for badges and highlights, #D4D5D2 borders. Surface is a tint I added.</span></li>
+        <li><strong>Contrast</strong><span>White on cocoa 7.4:1. Text on background 18.1:1. Near-black on mist blue 8.5:1. Dark mode accent 9.6:1.</span></li>
+        <li><strong>Watch out</strong><span>Tan and mist blue are only 2.1 to 2.8:1 on white, so use them for backgrounds and decoration, never for text or icons.</span></li>
+        <li><strong>Best for</strong><span>Leather, casual and premium shoes. Photos pop on the blue-grey backdrop.</span></li>
+      </ul>
+    </article>
+
+  </div>
+
+  <p class="foot">Contrast ratios were calculated from the hex values. Text needs 4.5:1 and buttons or icons need 3:1. Prices in the previews use the planned ₹ conversion of DummyJSON's Nike Air Jordan 1 Red And Black, shown as an example.</p>
+</div>
+
+<script>
+(function(){
+  var phone = '' +
+  '<div class="top"><span><i class="dot"></i>ShoeAdda</span><span aria-hidden="true">&#9825;</span></div>' +
+  '<div class="search">Search shoes, brands</div>' +
+  '<div class="chips"><span class="chip on">All</span><span class="chip">Men</span><span class="chip">Women</span><span class="chip">Sports</span></div>' +
+  '<div class="card">' +
+    '<div class="shot"><span class="disc">-4%</span><span class="heart" aria-hidden="true">&#9825;</span>' +
+      '<svg viewBox="0 0 100 62" aria-hidden="true"><path d="M8 50c0-6 6-8 12-10l16-17c4-4 10-2 14 2l8 8c8 2 26 4 34 10 4 3 4 8 0 10H12z" fill="var(--p-accent)"/><path d="M8 50h84v6c0 2-2 3-4 3H12c-2 0-4-1-4-3z" fill="var(--p-text)"/><path d="M38 24l7 8M46 26l7 8" stroke="var(--p-on)" stroke-width="2" stroke-linecap="round"/></svg></div>' +
+    '<div><div class="brand">Nike</div><div class="name">Air Jordan 1 Red and Black</div></div>' +
+    '<div class="price"><b>&#8377;12,499</b><s>&#8377;12,999</s><span>4% off</span></div>' +
+    '<div class="sizes"><span class="sz">UK 7</span><span class="sz off">UK 8</span><span class="sz sel">UK 9</span><span class="sz">UK 10</span></div>' +
+    '<div class="btns"><span class="btn alt">Buy now</span><span class="btn">Add to cart</span></div>' +
+  '</div>' +
+  '<div class="nav"><span class="act">Home</span><span>Categories</span><span>Wishlist</span><span>Cart</span><span>Profile</span></div>';
+
+  var names = [['bg','Background','--l-bg','--d-bg'],['surface','Surface','--l-surface','--d-surface'],['text','Text','--l-text','--d-text'],
+               ['accent','Accent','--l-accent','--d-accent'],['sale','Sale','--l-sale','--d-sale'],['muted','Muted text','--l-muted','--d-muted']];
+  var mode = 'light';
+
+  function hex(el, v){ return getComputedStyle(el).getPropertyValue(v).trim().toUpperCase(); }
+
+  function renderRoles(){
+    document.querySelectorAll('.opt').forEach(function(opt){
+      var ul = opt.querySelector('[data-roles]'); ul.innerHTML = '';
+      names.forEach(function(n){
+        var v = hex(opt, mode === 'light' ? n[2] : n[3]);
+        var li = document.createElement('li');
+        var b = document.createElement('button');
+        b.type = 'button'; b.className = 'sw'; b.setAttribute('aria-label', n[1] + ' ' + v + ', copy');
+        b.innerHTML = '<i style="background:' + v + '"></i><span><small>' + n[1] + '</small><b>' + v + '</b></span>';
+        b.addEventListener('click', function(){
+          var t = b.querySelector('b'), old = v;
+          function done(ok){ t.textContent = ok ? 'Copied' : old; setTimeout(function(){ t.textContent = old; }, 1100); }
+          try { navigator.clipboard.writeText(v).then(function(){ done(true); }, function(){ done(false); }); } catch(e){ done(false); }
+        });
+        li.appendChild(b); ul.appendChild(li);
+      });
+    });
+  }
+
+  function setMode(m){
+    mode = m;
+    document.querySelectorAll('[data-phone]').forEach(function(p){ p.className = 'phone ' + (m === 'light' ? 'p-light' : 'p-dark'); });
+    document.getElementById('m-light').setAttribute('aria-pressed', m === 'light');
+    document.getElementById('m-dark').setAttribute('aria-pressed', m === 'dark');
+    renderRoles();
+  }
+
+  document.querySelectorAll('[data-phone]').forEach(function(p){ p.innerHTML = phone; });
+  document.getElementById('m-light').addEventListener('click', function(){ setMode('light'); });
+  document.getElementById('m-dark').addEventListener('click', function(){ setMode('dark'); });
+  setMode('light');
+})();
+</script>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cancel order, dark</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:844px;overflow:hidden;background:#131212;color:#F2F0EC;font-family:'Archivo',system-ui,sans-serif;font-size:14px;line-height:1.4;box-sizing:border-box">
+
+<div style="padding:24px 16px;display:flex;flex-direction:column;gap:14px" aria-hidden="true">
+<span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;text-transform:uppercase;letter-spacing:.015em">Order details</span>
+<div style="height:72px;border-radius:14px;background:#1F1E1E"></div>
+<div style="height:240px;border-radius:14px;border:1px solid #302E2E"></div>
+<div style="height:120px;border-radius:14px;background:#1F1E1E"></div>
+</div>
+<div style="position:absolute;inset:0;background:rgba(0,0,0,.62)"></div>
+
+<div role="dialog" aria-label="Cancel order" style="position:absolute;left:0;right:0;bottom:0;background:#1A1918;border-radius:24px 24px 0 0;display:flex;flex-direction:column;padding-bottom:20px">
+<div style="width:40px;height:4px;border-radius:2px;background:#302E2E;margin:10px auto 4px"></div>
+<div style="display:flex;flex-direction:column;gap:4px;padding:8px 16px 12px;border-bottom:1px solid #302E2E">
+<h2 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:26px;line-height:1.05;letter-spacing:.015em;text-transform:uppercase">Cancel this order?</h2>
+<span style="font-size:13.5px;color:#A19C94">SA-1102-0231 · 2 items · ₹18,088. Tell us why so we can improve.</span>
+</div>
+<div style="display:flex;flex-direction:column;padding:0 16px">
+<sc-for list="{{reasons}}" as="r" hint-placeholder-count="5">
+<div style="display:flex;align-items:center;justify-content:space-between;height:54px;border-bottom:1px solid #302E2E">
+<span style="font-size:15px;font-weight:{{r.weight}}">{{r.text}}</span>
+<span style="width:22px;height:22px;border-radius:50%;border:2px solid {{r.ring}};box-sizing:border-box;display:grid;place-items:center"><span style="width:10px;height:10px;border-radius:50%;background:{{r.dot}}"></span></span>
+</div>
+</sc-for>
+</div>
+<div style="display:flex;gap:10px;padding:16px 16px 0">
+<div style="flex:1;height:52px;border:1.5px solid #F2F0EC;border-radius:12px;font-size:15px;font-weight:600;display:grid;place-items:center;box-sizing:border-box">Keep order</div>
+<div style="flex:1;height:52px;border-radius:12px;background:#E58A72;color:#131212;font-size:15px;font-weight:700;display:grid;place-items:center">Cancel order</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const on = { weight: 700, ring: '#C9B79A', dot: '#C9B79A' };
+    const off = { weight: 500, ring: '#A19C94', dot: 'transparent' };
+    return {
+      reasons: [
+        { text: 'Ordered the wrong size', ...on },
+        { text: 'Found a better price', ...off },
+        { text: 'Delivery is taking too long', ...off },
+        { text: 'Changed my mind', ...off },
+        { text: 'Other reason', ...off }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

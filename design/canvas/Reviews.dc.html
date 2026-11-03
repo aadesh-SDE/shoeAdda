@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reviews</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<style>
+body{margin:0}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:1100px;overflow:hidden;background:#FBFBFB;color:#131212;font-family:'Archivo',system-ui,sans-serif;font-size:14px;line-height:1.4;box-sizing:border-box">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+</defs></svg>
+
+<div style="display:flex;flex-direction:column;gap:20px;padding:12px 0 120px">
+
+<div style="display:flex;align-items:center;height:52px;padding:0 4px;border-bottom:1px solid #D4D5D2;box-sizing:border-box">
+<a href="ProductDetailMore.dc.html" aria-label="Back" style="width:44px;height:44px;color:#131212;display:grid;place-items:center;text-decoration:none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-back"/></svg></a>
+<h1 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;line-height:1;letter-spacing:.015em;text-transform:uppercase">Reviews</h1>
+</div>
+
+<div style="display:flex;gap:20px;align-items:center;padding:0 16px">
+<div style="display:flex;flex-direction:column;align-items:center;gap:2px"><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:60px;line-height:1">4.8</span><div style="display:flex;gap:1px;color:#A5967C"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></div><span style="font-size:12px;color:#6B6B66">126 reviews</span></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px">
+<sc-for list="{{bars}}" as="b" hint-placeholder-count="5">
+<div style="display:flex;align-items:center;gap:8px"><span style="width:12px;font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums">{{b.star}}</span><div style="flex:1;height:8px;border-radius:4px;background:#EEEEEC"><div style="width:{{b.pct}};height:8px;border-radius:4px;background:#68513F"></div></div><span style="width:32px;text-align:right;font-size:12px;color:#6B6B66;font-variant-numeric:tabular-nums">{{b.pct}}</span></div>
+</sc-for>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px;padding:0 16px">
+<span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B6B66">How it fits</span>
+<div style="display:flex;flex-direction:column;gap:5px"><div style="display:flex;justify-content:space-between;font-size:13.5px"><span>Runs small</span><span style="font-weight:600">8%</span></div><div style="height:8px;border-radius:4px;background:#EEEEEC"><div style="width:8%;height:8px;border-radius:4px;background:#A5967C"></div></div></div>
+<div style="display:flex;flex-direction:column;gap:5px"><div style="display:flex;justify-content:space-between;font-size:13.5px"><span style="font-weight:700">True to size</span><span style="font-weight:700">82%</span></div><div style="height:8px;border-radius:4px;background:#EEEEEC"><div style="width:82%;height:8px;border-radius:4px;background:#68513F"></div></div></div>
+<div style="display:flex;flex-direction:column;gap:5px"><div style="display:flex;justify-content:space-between;font-size:13.5px"><span>Runs large</span><span style="font-weight:600">10%</span></div><div style="height:8px;border-radius:4px;background:#EEEEEC"><div style="width:10%;height:8px;border-radius:4px;background:#A5967C"></div></div></div>
+</div>
+
+<div style="display:flex;gap:8px;padding:0 16px;overflow:hidden">
+<button style="flex:none;height:36px;padding:0 16px;border:0;border-radius:18px;background:#131212;color:#FBFBFB;font-size:13px;font-weight:600;cursor:pointer">All</button>
+<button style="flex:none;height:36px;padding:0 16px;border:0;border-radius:18px;background:#EEEEEC;color:#131212;font-size:13px;font-weight:600;cursor:pointer">With photos</button>
+<button style="flex:none;height:36px;padding:0 16px;border:0;border-radius:18px;background:#EEEEEC;color:#131212;font-size:13px;font-weight:600;cursor:pointer">Runs small</button>
+<button style="flex:none;height:36px;padding:0 16px;border:0;border-radius:18px;background:#EEEEEC;color:#131212;font-size:13px;font-weight:600;cursor:pointer">True to size</button>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px;padding:0 16px">
+<sc-for list="{{reviews}}" as="r" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;gap:8px;padding:14px;border-radius:14px;background:#EEEEEC">
+<div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:14px;font-weight:700">{{r.name}}</span><span style="display:flex;align-items:center;gap:4px;font-size:12px;color:#68513F;font-weight:600"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg>Verified buyer</span></div>
+<div style="display:flex;align-items:center;gap:8px"><div style="display:flex;gap:2px;color:#A5967C"><sc-for list="{{r.stars}}" as="s" hint-placeholder-count="5"><svg width="15" height="15" viewBox="0 0 24 24" style="opacity:{{s}}" aria-hidden="true"><use href="#i-star"/></svg></sc-for></div><span style="font-size:12px;color:#6B6B66">{{r.date}}</span></div>
+<span style="font-size:14px;line-height:1.5">{{r.text}}</span>
+<span style="align-self:flex-start;height:24px;padding:0 10px;border-radius:12px;background:#FBFBFB;font-size:12px;font-weight:600;display:grid;place-items:center">{{r.fit}}</span>
+</div>
+</sc-for>
+</div>
+
+</div>
+
+<div style="position:absolute;left:0;right:0;bottom:0;height:84px;background:#FBFBFB;border-top:1px solid #D4D5D2;padding:12px 16px 20px;box-sizing:border-box">
+<a href="WriteReview.dc.html" style="display:grid;place-items:center;width:100%;height:52px;border-radius:12px;background:#68513F;color:#FFFFFF;font-size:15px;font-weight:700;text-decoration:none">Write a review</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1100}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      bars: [
+        { star: '5', pct: '78%' }, { star: '4', pct: '15%' }, { star: '3', pct: '4%' }, { star: '2', pct: '2%' }, { star: '1', pct: '1%' }
+      ],
+      reviews: [
+        { name: 'Elena Long', date: '30 Apr', stars: [1, 1, 1, 1, 1], text: 'Highly impressed!', fit: 'True to size · bought UK 9' },
+        { name: 'Addison Wright', date: '30 Apr', stars: [1, 1, 1, 1, 0.3], text: 'Very happy with my purchase!', fit: 'Runs small · bought UK 8' },
+        { name: 'Mason Wright', date: '29 Apr', stars: [1, 0.3, 0.3, 0.3, 0.3], text: 'Waste of money!', fit: 'Runs large · bought UK 10' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

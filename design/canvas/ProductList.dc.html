@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Product list</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<style>
+body{margin:0}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:844px;overflow:hidden;background:#FBFBFB;color:#131212;font-family:'Archivo',system-ui,sans-serif;font-size:14px;line-height:1.4;box-sizing:border-box">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+<symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.2 11h10.6L20 8H6.2"/><circle cx="9" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.4A4 4 0 0119 10c0 5.6-7 10-7 10z"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></symbol>
+<symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M7 12h10"/><path d="M10 18h4"/></symbol>
+<symbol id="i-sort" viewBox="0 0 24 24"><path d="M7 4v16"/><path d="M4 17l3 3 3-3"/><path d="M17 20V4"/><path d="M14 7l3-3 3 3"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9a1 1 0 01-1 1h-4v-6H9v6H5a1 1 0 01-1-1z"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1.2"/><rect x="14" y="4" width="6" height="6" rx="1.2"/><rect x="4" y="14" width="6" height="6" rx="1.2"/><rect x="14" y="14" width="6" height="6" rx="1.2"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></symbol>
+</defs></svg>
+
+<div style="display:flex;flex-direction:column;gap:12px;padding-top:12px">
+
+<div style="display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 4px;border-bottom:1px solid #D4D5D2;box-sizing:border-box">
+<div style="display:flex;align-items:center;gap:0;min-width:0">
+<a href="Main.dc.html" aria-label="Back" style="width:44px;height:44px;color:#131212;display:grid;place-items:center;text-decoration:none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-back"/></svg></a>
+<div style="display:flex;flex-direction:column;min-width:0">
+<h1 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;line-height:1;letter-spacing:.015em;text-transform:uppercase">Men's sneakers</h1>
+<span style="font-size:12px;color:#6B6B66;margin-top:2px">42 shoes</span>
+</div>
+</div>
+<div style="display:flex">
+<a href="Search.dc.html" aria-label="Search" style="width:44px;height:44px;color:#131212;display:grid;place-items:center;text-decoration:none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-search"/></svg></a>
+<a href="Cart.dc.html" aria-label="Cart, 2 items" style="position:relative;width:44px;height:44px;color:#131212;display:grid;place-items:center;text-decoration:none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-cart"/></svg><span style="position:absolute;top:5px;right:3px;min-width:18px;height:18px;border-radius:9px;background:#68513F;color:#FFFFFF;font-size:11px;font-weight:700;display:grid;place-items:center">2</span></a>
+</div>
+</div>
+
+<div style="display:flex;gap:10px;padding:0 16px">
+<a href="FilterSheet.dc.html" style="flex:1;height:44px;border:1px solid #D4D5D2;border-radius:12px;background:#FBFBFB;color:#131212;display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;font-weight:600;text-decoration:none;box-sizing:border-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-filter"/></svg>Filter<span style="min-width:20px;height:20px;border-radius:10px;background:#68513F;color:#FFFFFF;font-size:11px;font-weight:700;display:grid;place-items:center">2</span></a>
+<a href="SortSheet.dc.html" style="flex:1;height:44px;border:1px solid #D4D5D2;border-radius:12px;background:#FBFBFB;color:#131212;display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;font-weight:600;text-decoration:none;box-sizing:border-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-sort"/></svg>Popularity</a>
+</div>
+
+<div style="display:flex;gap:8px;padding:0 16px;align-items:center;overflow:hidden">
+<span style="flex:none;height:32px;padding:0 10px 0 12px;border-radius:16px;background:#EEEEEC;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600">UK 9<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><use href="#i-close"/></svg></span>
+<span style="flex:none;height:32px;padding:0 10px 0 12px;border-radius:16px;background:#EEEEEC;display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600">Under ₹13,000<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><use href="#i-close"/></svg></span>
+<a href="#clear" style="flex:none;font-size:13px;font-weight:600;color:#68513F;text-decoration:none;padding:0 4px">Clear all</a>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px;padding:4px 16px 0">
+<sc-for list="{{products}}" as="p" hint-placeholder-count="4">
+<div style="position:relative;display:flex;flex-direction:column;gap:8px;min-width:0">
+<a href="ProductDetail.dc.html" aria-label="{{p.name}}" style="position:absolute;inset:0"></a>
+<div style="position:relative;height:150px;border-radius:16px;background:{{p.bg}};display:grid;place-items:center;overflow:hidden">
+<sc-if value="{{p.off}}" hint-placeholder-val="{{true}}"><span style="position:absolute;top:10px;left:10px;height:22px;padding:0 8px;border-radius:6px;background:#B4472F;color:#FFFFFF;font-size:11px;font-weight:700;display:grid;place-items:center">{{p.off}}</span></sc-if>
+<button aria-label="Add to wishlist" style="position:absolute;top:0;right:0;width:44px;height:44px;border:0;background:transparent;display:grid;place-items:center;cursor:pointer"><span style="width:30px;height:30px;border-radius:50%;background:#FBFBFB;color:#131212;display:grid;place-items:center"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-heart"/></svg></span></button>
+<svg viewBox="0 0 100 62" style="width:80%;height:auto" aria-hidden="true"><path d="M6 48c0-6 6-8 12-10l16-17c4-4 10-2 14 2l8 8c8 2 28 4 36 10 4 3 4 8 0 10H10z" fill="{{p.body}}"/><path d="M30 43c14-6 34-6 52 0" fill="none" stroke="{{p.stripe}}" stroke-width="3" stroke-linecap="round"/><path d="M6 48h88v7c0 2-2 3-4 3H10c-2 0-4-1-4-3z" fill="{{p.sole}}"/><path d="M36 22l7 8M44 24l7 8" stroke="{{p.stripe}}" stroke-width="2.2" stroke-linecap="round"/></svg>
+</div>
+<div style="display:flex;flex-direction:column;gap:2px;min-width:0">
+<span style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6B6B66">{{p.brand}}</span>
+<span style="font-size:14px;font-weight:600;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{p.name}}</span>
+<div style="display:flex;align-items:center;justify-content:space-between;margin-top:2px"><div style="display:flex;align-items:baseline;gap:6px"><span style="font-size:15px;font-weight:700;font-variant-numeric:tabular-nums">{{p.price}}</span><s style="font-size:12px;color:#6B6B66;font-variant-numeric:tabular-nums">{{p.old}}</s></div><span style="display:flex;align-items:center;gap:3px;font-size:12px;font-weight:600"><svg width="13" height="13" viewBox="0 0 24 24" style="color:#A5967C" aria-hidden="true"><use href="#i-star"/></svg>{{p.rating}}</span></div>
+<sc-if value="{{p.low}}" hint-placeholder-val="{{false}}"><span style="font-size:12px;font-weight:600;color:#B4472F">{{p.low}}</span></sc-if>
+</div>
+</div>
+</sc-for>
+</div>
+
+</div>
+
+<nav aria-label="Main" style="position:absolute;left:0;right:0;bottom:0;height:72px;background:#FBFBFB;border-top:1px solid #D4D5D2;display:flex;box-sizing:border-box">
+<a href="Main.dc.html" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#6B6B66;text-decoration:none;font-size:11px;font-weight:600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-home"/></svg>Home</a>
+<a href="Categories.dc.html" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#68513F;text-decoration:none;font-size:11px;font-weight:700;position:relative"><span style="position:absolute;top:-1px;width:28px;height:3px;border-radius:2px;background:#68513F"></span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-grid"/></svg>Categories</a>
+<a href="Wishlist.dc.html" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#6B6B66;text-decoration:none;font-size:11px;font-weight:600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-heart"/></svg>Wishlist</a>
+<a href="Cart.dc.html" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#6B6B66;text-decoration:none;font-size:11px;font-weight:600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-cart"/></svg>Cart</a>
+<a href="Profile.dc.html" style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#6B6B66;text-decoration:none;font-size:11px;font-weight:600"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-user"/></svg>Profile</a>
+</nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      products: [
+        { name: 'Air Jordan 1 Red and Black', brand: 'Nike', price: '₹12,499', old: '₹12,999', off: '-4%', rating: '4.8', low: '', bg: '#9BB3BE', body: '#8C2F23', sole: '#131212', stripe: '#131212' },
+        { name: 'Nike Baseball Cleats', brand: 'Nike', price: '₹6,799', old: '', off: '', rating: '4.5', low: '', bg: '#D4D5D2', body: '#131212', sole: '#FBFBFB', stripe: '#9BB3BE' },
+        { name: 'Puma Future Rider Trainers', brand: 'Puma', price: '₹7,599', old: '₹8,499', off: '-11%', rating: '4.6', low: '', bg: '#A5967C', body: '#FBFBFB', sole: '#131212', stripe: '#68513F' },
+        { name: 'Sports Sneakers Off White & Red', brand: 'Off White', price: '₹9,999', old: '₹11,499', off: '-13%', rating: '4.4', low: 'Only 2 left in UK 9', bg: '#9BB3BE', body: '#FBFBFB', sole: '#B4472F', stripe: '#131212' },
+        { name: 'Sports Sneakers Off White Red', brand: 'Off White', price: '₹9,299', old: '', off: '', rating: '4.3', low: '', bg: '#D4D5D2', body: '#EEEEEC', sole: '#B4472F', stripe: '#B4472F' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

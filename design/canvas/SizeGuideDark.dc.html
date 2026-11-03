@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Size guide, dark</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<style>
+body{margin:0}
+input{font-family:inherit}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:844px;overflow:hidden;background:#131212;color:#F2F0EC;font-family:'Archivo',system-ui,sans-serif;font-size:14px;line-height:1.4;box-sizing:border-box">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+</defs></svg>
+
+<div style="display:flex;flex-direction:column;gap:16px;padding:12px 16px 0">
+
+<div style="display:flex;align-items:center;height:52px;margin:0 -16px;padding:0 4px;border-bottom:1px solid #302E2E;box-sizing:border-box">
+<span style="width:44px;height:44px;display:grid;place-items:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-back"/></svg></span>
+<h1 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;line-height:1;letter-spacing:.015em;text-transform:uppercase">Size guide</h1>
+</div>
+
+<div style="display:flex;background:#1F1E1E;border-radius:12px;padding:3px;gap:2px">
+<span style="flex:1;height:38px;border-radius:10px;background:#131212;font-size:14px;font-weight:700;display:grid;place-items:center">Men</span>
+<span style="flex:1;height:38px;color:#A19C94;font-size:14px;font-weight:600;display:grid;place-items:center">Women</span>
+<span style="flex:1;height:38px;color:#A19C94;font-size:14px;font-weight:600;display:grid;place-items:center">Kids</span>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:10px">
+<label for="foot" style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#A19C94">Your foot length</label>
+<div style="display:flex;align-items:center;gap:10px">
+<input id="foot" type="text" inputmode="decimal" value="26.5" style="flex:1;min-width:0;height:48px;border:1.5px solid #F2F0EC;border-radius:12px;background:#131212;color:#F2F0EC;font-size:20px;font-weight:700;padding:0 14px;font-variant-numeric:tabular-nums;box-sizing:border-box">
+<span style="font-size:15px;font-weight:600;color:#A19C94">cm</span>
+</div>
+</div>
+
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px;border-radius:16px;background:#2B2622;border:1px solid #3A322B">
+<div style="display:flex;flex-direction:column;gap:2px">
+<span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#C9B79A">Your size</span>
+<span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:44px;line-height:1">UK 9</span>
+<span style="font-size:13.5px;color:#D8D2C8">US 10 · EU 43</span>
+</div>
+<span style="height:44px;padding:0 16px;border-radius:12px;background:#C9B79A;color:#131212;font-size:13.5px;font-weight:700;display:grid;place-items:center">Save to profile</span>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:6px;font-size:13px">
+<span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#A19C94">How to measure</span>
+<span>1. Stand on a sheet of paper with your heel against a wall.</span>
+<span>2. Mark the tip of your longest toe.</span>
+<span>3. Measure from the wall to the mark in cm.</span>
+</div>
+
+<div style="display:flex;flex-direction:column">
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));height:34px;align-items:center;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#A19C94;border-bottom:1px solid #302E2E;padding:0 12px"><span>Foot (cm)</span><span>UK</span><span>US</span><span>EU</span></div>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="6">
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));height:{{r.h}};align-items:center;font-size:14px;font-weight:{{r.w}};padding:0 12px;border-radius:{{r.rad}};background:{{r.bg}};border-bottom:{{r.bb}};font-variant-numeric:tabular-nums"><span>{{r.cm}}</span><span>{{r.uk}}</span><span>{{r.us}}</span><span>{{r.eu}}</span></div>
+</sc-for>
+</div>
+
+<p style="margin:0;font-size:12.5px;line-height:1.5;color:#A19C94">Sizes vary by brand. If you are between two sizes, pick the larger one. Free size exchange within 30 days.</p>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const n = { h: '38px', w: 400, rad: '0', bg: 'transparent', bb: '1px solid #302E2E' };
+    const hl = { h: '40px', w: 700, rad: '10px', bg: '#1F1E1E', bb: '0' };
+    return {
+      rows: [
+        { cm: '24.1', uk: '6', us: '7', eu: '40', ...n },
+        { cm: '25.0', uk: '7', us: '8', eu: '41', ...n },
+        { cm: '25.8', uk: '8', us: '9', eu: '42', ...n },
+        { cm: '26.7', uk: '9', us: '10', eu: '43', ...hl },
+        { cm: '27.5', uk: '10', us: '11', eu: '44', ...n },
+        { cm: '28.3', uk: '11', us: '12', eu: '45.5', h: '38px', w: 400, rad: '0', bg: 'transparent', bb: '0' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

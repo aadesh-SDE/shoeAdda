@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>My orders</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<style>
+body{margin:0}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:844px;overflow:hidden;background:#FBFBFB;color:#131212;font-family:'Archivo',system-ui,sans-serif;font-size:14px;line-height:1.4;box-sizing:border-box">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+<symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+</defs></svg>
+
+<div style="display:flex;flex-direction:column;gap:14px;padding-top:12px">
+
+<div style="display:flex;align-items:center;height:52px;padding:0 4px;border-bottom:1px solid #D4D5D2;box-sizing:border-box">
+<a href="Profile.dc.html" aria-label="Back" style="width:44px;height:44px;color:#131212;display:grid;place-items:center;text-decoration:none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-back"/></svg></a>
+<h1 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;line-height:1;letter-spacing:.015em;text-transform:uppercase">My orders</h1>
+</div>
+
+<div style="display:flex;gap:8px;padding:0 16px;overflow:hidden">
+<button style="flex:none;height:38px;padding:0 18px;border:0;border-radius:19px;background:#131212;color:#FBFBFB;font-size:13.5px;font-weight:600;cursor:pointer">All</button>
+<button style="flex:none;height:38px;padding:0 18px;border:0;border-radius:19px;background:#EEEEEC;color:#131212;font-size:13.5px;font-weight:600;cursor:pointer">Active</button>
+<button style="flex:none;height:38px;padding:0 18px;border:0;border-radius:19px;background:#EEEEEC;color:#131212;font-size:13.5px;font-weight:600;cursor:pointer">Delivered</button>
+<button style="flex:none;height:38px;padding:0 18px;border:0;border-radius:19px;background:#EEEEEC;color:#131212;font-size:13.5px;font-weight:600;cursor:pointer">Cancelled</button>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px;padding:0 16px">
+
+<sc-for list="{{orders}}" as="o" hint-placeholder-count="3">
+<a href="OrderDetail.dc.html" style="display:flex;flex-direction:column;gap:12px;padding:14px;border:1px solid #D4D5D2;border-radius:16px;color:#131212;text-decoration:none">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+<div style="display:flex;flex-direction:column"><span style="font-size:14.5px;font-weight:700;font-variant-numeric:tabular-nums">{{o.id}}</span><span style="font-size:12.5px;color:#6B6B66">{{o.date}}</span></div>
+<span style="height:26px;padding:0 12px;border-radius:13px;background:{{o.chipBg}};color:{{o.chipFg}};font-size:12px;font-weight:700;display:grid;place-items:center">{{o.status}}</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px">
+<span style="width:56px;height:56px;border-radius:12px;background:{{o.bg1}};display:grid;place-items:center"><svg viewBox="0 0 100 62" style="width:80%;height:auto" aria-hidden="true"><path d="M6 48c0-6 6-8 12-10l16-17c4-4 10-2 14 2l8 8c8 2 28 4 36 10 4 3 4 8 0 10H10z" fill="{{o.body1}}"/><path d="M6 48h88v7c0 2-2 3-4 3H10c-2 0-4-1-4-3z" fill="#131212"/></svg></span>
+<sc-if value="{{o.two}}" hint-placeholder-val="{{true}}"><span style="width:56px;height:56px;border-radius:12px;background:#A5967C;display:grid;place-items:center"><svg viewBox="0 0 100 62" style="width:80%;height:auto" aria-hidden="true"><path d="M6 48c0-6 6-8 12-10l16-17c4-4 10-2 14 2l8 8c8 2 28 4 36 10 4 3 4 8 0 10H10z" fill="#FBFBFB"/><path d="M6 48h88v7c0 2-2 3-4 3H10c-2 0-4-1-4-3z" fill="#131212"/></svg></span></sc-if>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;margin-left:4px"><span style="font-size:13.5px;color:#6B6B66">{{o.count}}</span><span style="font-size:17px;font-weight:700;font-variant-numeric:tabular-nums">{{o.total}}</span></div>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B6B66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chev"/></svg>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid #D4D5D2"><span style="font-size:13px;color:#6B6B66">{{o.note}}</span><span style="font-size:13px;font-weight:700;color:#68513F">{{o.action}}</span></div>
+</a>
+</sc-for>
+
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      orders: [
+        { id: 'SA-1102-0231', date: 'Placed 2 Nov', status: 'Packed', chipBg: '#E9E0D6', chipFg: '#68513F', bg1: '#9BB3BE', body1: '#8C2F23', two: true, count: '2 items', total: '₹18,088', note: 'Arriving Fri, 6 Nov', action: 'Track order' },
+        { id: 'SA-1018-0170', date: 'Placed 18 Oct', status: 'Delivered', chipBg: '#EEEEEC', chipFg: '#131212', bg1: '#D4D5D2', body1: '#131212', two: false, count: '1 item', total: '₹6,799', note: 'Delivered 24 Oct', action: 'Rate this shoe' },
+        { id: 'SA-0927-0098', date: 'Placed 27 Sep', status: 'Cancelled', chipBg: '#F4DDD7', chipFg: '#8F2F1B', bg1: '#9BB3BE', body1: '#EEEEEC', two: false, count: '1 item', total: '₹9,999', note: 'Cancelled before shipping', action: 'View details' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

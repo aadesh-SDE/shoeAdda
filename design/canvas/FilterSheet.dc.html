@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Filter sheet</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<style>
+body{margin:0}
+button{font-family:inherit}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:844px;overflow:hidden;background:#FBFBFB;color:#131212;font-family:'Archivo',system-ui,sans-serif;font-size:14px;line-height:1.4;box-sizing:border-box">
+
+<div style="padding:24px 16px;display:flex;flex-direction:column;gap:16px" aria-hidden="true">
+<span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:26px;text-transform:uppercase;letter-spacing:.015em">Men's sneakers</span>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div style="height:150px;border-radius:16px;background:#9BB3BE"></div><div style="height:150px;border-radius:16px;background:#D4D5D2"></div></div>
+</div>
+<a href="ProductList.dc.html" aria-label="Close filters" style="position:absolute;inset:0;background:rgba(19,18,18,.55)"></a>
+
+<div role="dialog" aria-label="Filters" style="position:absolute;left:0;right:0;top:60px;bottom:0;background:#FBFBFB;border-radius:24px 24px 0 0;display:flex;flex-direction:column">
+<div style="width:40px;height:4px;border-radius:2px;background:#D4D5D2;margin:10px auto 4px"></div>
+<div style="display:flex;align-items:center;justify-content:space-between;height:48px;padding:0 8px 0 16px;border-bottom:1px solid #D4D5D2;box-sizing:border-box">
+<h2 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;letter-spacing:.015em;text-transform:uppercase">Filters</h2>
+<button style="height:44px;padding:0 12px;border:0;background:transparent;color:#68513F;font-size:14px;font-weight:600;cursor:pointer">Reset</button>
+</div>
+
+<div style="flex:1;overflow:hidden;padding:8px 16px 0;display:flex;flex-direction:column;gap:16px">
+
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;align-items:center;justify-content:space-between"><span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B6B66">Size</span>
+<div style="display:flex;background:#EEEEEC;border-radius:10px;padding:3px;gap:2px"><button style="height:28px;padding:0 14px;border:0;border-radius:8px;background:#FBFBFB;color:#131212;font-size:12.5px;font-weight:700;cursor:pointer;box-shadow:0 1px 2px rgba(0,0,0,.15)">UK</button><button style="height:28px;padding:0 14px;border:0;border-radius:8px;background:transparent;color:#6B6B66;font-size:12.5px;font-weight:600;cursor:pointer">US</button><button style="height:28px;padding:0 14px;border:0;border-radius:8px;background:transparent;color:#6B6B66;font-size:12.5px;font-weight:600;cursor:pointer">EU</button></div></div>
+<div style="display:flex;gap:8px">
+<button style="width:48px;height:36px;border:1px solid #D4D5D2;border-radius:10px;background:#FBFBFB;color:#131212;font-size:14px;font-weight:600;cursor:pointer">6</button>
+<button style="width:48px;height:36px;border:1px solid #D4D5D2;border-radius:10px;background:#FBFBFB;color:#131212;font-size:14px;font-weight:600;cursor:pointer">7</button>
+<button style="width:48px;height:36px;border:1px solid #D4D5D2;border-radius:10px;background:#FBFBFB;color:#6B6B66;font-size:14px;font-weight:600;cursor:pointer;text-decoration:line-through;opacity:.55" aria-label="UK 8, out of stock">8</button>
+<button style="width:48px;height:36px;border:1px solid #68513F;border-radius:10px;background:#68513F;color:#FFFFFF;font-size:14px;font-weight:700;cursor:pointer" aria-pressed="true">9</button>
+<button style="width:48px;height:36px;border:1px solid #D4D5D2;border-radius:10px;background:#FBFBFB;color:#131212;font-size:14px;font-weight:600;cursor:pointer">10</button>
+<button style="width:48px;height:36px;border:1px solid #D4D5D2;border-radius:10px;background:#FBFBFB;color:#131212;font-size:14px;font-weight:600;cursor:pointer">11</button>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:8px">
+<span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B6B66">Brand</span>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<button style="height:36px;padding:0 16px;border:1px solid #D4D5D2;border-radius:18px;background:#FBFBFB;color:#131212;font-size:13.5px;font-weight:600;cursor:pointer">Nike</button>
+<button style="height:36px;padding:0 16px;border:1px solid #D4D5D2;border-radius:18px;background:#FBFBFB;color:#131212;font-size:13.5px;font-weight:600;cursor:pointer">Puma</button>
+<button style="height:36px;padding:0 16px;border:1px solid #D4D5D2;border-radius:18px;background:#FBFBFB;color:#131212;font-size:13.5px;font-weight:600;cursor:pointer">Off White</button>
+<button style="height:36px;padding:0 16px;border:1px solid #D4D5D2;border-radius:18px;background:#FBFBFB;color:#131212;font-size:13.5px;font-weight:600;cursor:pointer">Calvin Klein</button>
+<button style="height:36px;padding:0 16px;border:1px solid #D4D5D2;border-radius:18px;background:#FBFBFB;color:#131212;font-size:13.5px;font-weight:600;cursor:pointer">Comfort Trends</button>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;align-items:baseline;justify-content:space-between"><span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B6B66">Price</span><span style="font-size:14px;font-weight:700;font-variant-numeric:tabular-nums">₹1,000 – ₹13,000</span></div>
+<div style="position:relative;height:28px;margin:0 6px">
+<div style="position:absolute;left:0;right:0;top:12px;height:4px;border-radius:2px;background:#D4D5D2"></div>
+<div style="position:absolute;left:18px;width:215px;top:12px;height:4px;border-radius:2px;background:#68513F"></div>
+<div style="position:absolute;left:6px;top:2px;width:24px;height:24px;border-radius:50%;background:#FBFBFB;border:3px solid #68513F;box-sizing:border-box"></div>
+<div style="position:absolute;left:221px;top:2px;width:24px;height:24px;border-radius:50%;background:#FBFBFB;border:3px solid #68513F;box-sizing:border-box"></div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:8px">
+<span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B6B66">Color</span>
+<div style="display:flex;gap:12px">
+<button aria-label="Black" style="width:36px;height:36px;border-radius:50%;border:1px solid #D4D5D2;background:#131212;cursor:pointer"></button>
+<button aria-label="White" style="width:36px;height:36px;border-radius:50%;border:1px solid #D4D5D2;background:#FBFBFB;cursor:pointer"></button>
+<button aria-label="Red" style="width:36px;height:36px;border-radius:50%;border:1px solid #D4D5D2;background:#B4472F;cursor:pointer"></button>
+<button aria-label="Mist blue" style="width:36px;height:36px;border-radius:50%;border:1px solid #D4D5D2;background:#9BB3BE;cursor:pointer"></button>
+<button aria-label="Tan" style="width:36px;height:36px;border-radius:50%;border:1px solid #D4D5D2;background:#A5967C;cursor:pointer"></button>
+<button aria-label="Brown" style="width:36px;height:36px;border-radius:50%;border:1px solid #D4D5D2;background:#68513F;cursor:pointer"></button>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:8px">
+<span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B6B66">Foot width</span>
+<div style="display:flex;background:#EEEEEC;border-radius:10px;padding:3px;gap:2px">
+<button style="flex:1;height:34px;border:0;border-radius:8px;background:#FBFBFB;color:#131212;font-size:13px;font-weight:700;cursor:pointer;box-shadow:0 1px 2px rgba(0,0,0,.15)">Any</button>
+<button style="flex:1;height:34px;border:0;border-radius:8px;background:transparent;color:#6B6B66;font-size:13px;font-weight:600;cursor:pointer">Narrow</button>
+<button style="flex:1;height:34px;border:0;border-radius:8px;background:transparent;color:#6B6B66;font-size:13px;font-weight:600;cursor:pointer">Regular</button>
+<button style="flex:1;height:34px;border:0;border-radius:8px;background:transparent;color:#6B6B66;font-size:13px;font-weight:600;cursor:pointer">Wide</button>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:8px">
+<span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B6B66">Activity</span>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<button style="height:36px;padding:0 16px;border:1px solid #D4D5D2;border-radius:18px;background:#FBFBFB;color:#131212;font-size:13.5px;font-weight:600;cursor:pointer">Running</button>
+<button style="height:36px;padding:0 16px;border:1px solid #D4D5D2;border-radius:18px;background:#FBFBFB;color:#131212;font-size:13.5px;font-weight:600;cursor:pointer">Walking</button>
+<button style="height:36px;padding:0 16px;border:1px solid #D4D5D2;border-radius:18px;background:#FBFBFB;color:#131212;font-size:13.5px;font-weight:600;cursor:pointer">Training</button>
+<button style="height:36px;padding:0 16px;border:1px solid #D4D5D2;border-radius:18px;background:#FBFBFB;color:#131212;font-size:13.5px;font-weight:600;cursor:pointer">Casual</button>
+<button style="height:36px;padding:0 16px;border:1px solid #D4D5D2;border-radius:18px;background:#FBFBFB;color:#131212;font-size:13.5px;font-weight:600;cursor:pointer">Formal</button>
+</div>
+</div>
+
+</div>
+
+<div style="display:flex;gap:10px;padding:12px 16px 16px;border-top:1px solid #D4D5D2;background:#FBFBFB">
+<a href="ProductList.dc.html" style="flex:1;height:48px;border:1.5px solid #131212;border-radius:12px;color:#131212;font-size:15px;font-weight:600;display:grid;place-items:center;text-decoration:none;box-sizing:border-box">Clear</a>
+<a href="ProductList.dc.html" style="flex:2;height:48px;border-radius:12px;background:#68513F;color:#FFFFFF;font-size:15px;font-weight:700;display:grid;place-items:center;text-decoration:none">Show 18 shoes</a>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

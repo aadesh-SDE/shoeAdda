@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Notifications, dark</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:844px;overflow:hidden;background:#131212;color:#F2F0EC;font-family:'Archivo',system-ui,sans-serif;font-size:14px;line-height:1.4;box-sizing:border-box">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4"/><path d="M12 11v10"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 0112 0v5l1.5 2h-15z"/><path d="M10 21h4"/></symbol>
+<symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.3"/></symbol>
+<symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h11v10H2z"/><path d="M13 10h4l3 3v3h-7z"/><circle cx="6" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></symbol>
+</defs></svg>
+
+<div style="display:flex;flex-direction:column;gap:6px;padding-top:12px">
+
+<div style="display:flex;align-items:center;justify-content:space-between;height:52px;padding:0 16px 0 4px;border-bottom:1px solid #302E2E;box-sizing:border-box">
+<div style="display:flex;align-items:center">
+<span style="width:44px;height:44px;display:grid;place-items:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-back"/></svg></span>
+<h1 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;line-height:1;letter-spacing:.015em;text-transform:uppercase">Notifications</h1>
+</div>
+<span style="font-size:13px;font-weight:700;color:#C9B79A">Mark all read</span>
+</div>
+
+<div style="display:flex;flex-direction:column">
+<sc-for list="{{items}}" as="n" hint-placeholder-count="5">
+<div style="display:flex;gap:12px;padding:14px 16px;border-bottom:1px solid #302E2E;background:{{n.bg}}">
+<span style="flex:none;width:44px;height:44px;border-radius:50%;background:#262524;color:#C9B79A;display:grid;place-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="{{n.icon}}"/></svg></span>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-size:14.5px;font-weight:{{n.weight}}">{{n.title}}</span><span style="font-size:13px;line-height:1.45;color:#A19C94">{{n.text}}</span><span style="font-size:12px;color:#A19C94;margin-top:2px">{{n.time}}</span></div>
+<span style="flex:none;margin-top:6px;width:9px;height:9px;border-radius:50%;background:{{n.dot}}" aria-hidden="true"></span>
+</div>
+</sc-for>
+</div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const unread = { bg: '#1B1917', weight: 700, dot: '#E58A72' };
+    const read = { bg: '#131212', weight: 600, dot: 'transparent' };
+    return {
+      items: [
+        { icon: '#i-box', title: 'Your order is packed', text: 'SA-1102-0231 is packed and will ship soon.', time: '2 hours ago', ...unread },
+        { icon: '#i-bell', title: 'UK 8 is back in stock', text: 'Sports Sneakers Off White & Red is available again in your size.', time: 'Today, 9:10 AM', ...unread },
+        { icon: '#i-tag', title: 'Free delivery on every order', text: 'Use code FREESHIP at checkout this week.', time: 'Yesterday', ...read },
+        { icon: '#i-truck', title: 'Order placed', text: 'Thanks for shopping. Your order SA-1102-0231 is confirmed.', time: '2 Nov, 9:41 PM', ...read },
+        { icon: '#i-tag', title: 'Welcome to ShoeAdda', text: 'Use WELCOME10 for 10% off your first order.', time: '2 Nov', ...read }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

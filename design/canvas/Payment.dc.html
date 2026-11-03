@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Payment</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap">
+<style>
+body{margin:0}
+button,input{font-family:inherit}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:844px;overflow:hidden;background:#FBFBFB;color:#131212;font-family:'Archivo',system-ui,sans-serif;font-size:14px;line-height:1.4;box-sizing:border-box">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+</defs></svg>
+
+<div style="display:flex;flex-direction:column;gap:14px;padding:12px 16px 0">
+
+<div style="display:flex;align-items:center;height:52px;margin:0 -16px;padding:0 4px;border-bottom:1px solid #D4D5D2;box-sizing:border-box">
+<a href="Checkout.dc.html" aria-label="Back" style="width:44px;height:44px;color:#131212;display:grid;place-items:center;text-decoration:none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-back"/></svg></a>
+<h1 style="margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;line-height:1;letter-spacing:.015em;text-transform:uppercase">Payment</h1>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:6px">
+<div style="display:flex;gap:6px"><span style="flex:1;height:4px;border-radius:2px;background:#68513F"></span><span style="flex:1;height:4px;border-radius:2px;background:#68513F"></span></div>
+<div style="display:flex;justify-content:space-between;font-size:12.5px"><span style="color:#6B6B66">Address</span><span style="font-weight:700">Step 2 of 2: Payment</span></div>
+</div>
+
+<h2 style="margin:4px 0 0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;letter-spacing:.02em;text-transform:uppercase">Payment method</h2>
+
+<div style="display:flex;flex-direction:column;gap:12px;padding:14px;border:1.5px solid #68513F;border-radius:16px;background:#FBFBFB">
+<div style="display:flex;align-items:center;gap:12px">
+<span style="flex:none;width:22px;height:22px;border-radius:50%;border:2px solid #68513F;display:grid;place-items:center" role="img" aria-label="Selected"><span style="width:10px;height:10px;border-radius:50%;background:#68513F"></span></span>
+<div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:700">UPI</span><span style="font-size:12.5px;color:#6B6B66">Pay with any UPI app</span></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px">
+<label for="upi" style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B6B66">UPI ID</label>
+<input id="upi" type="text" value="amit@upi" style="height:48px;border:1.5px solid #131212;border-radius:12px;background:#FBFBFB;color:#131212;font-size:15px;font-weight:600;padding:0 14px;box-sizing:border-box;width:100%">
+</div>
+</div>
+
+<div style="display:flex;align-items:center;gap:12px;padding:14px;border:1px solid #D4D5D2;border-radius:16px;background:#FBFBFB">
+<span style="flex:none;width:22px;height:22px;border-radius:50%;border:2px solid #6B6B66;box-sizing:border-box" role="img" aria-label="Not selected"></span>
+<div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:700">Credit or debit card</span><span style="font-size:12.5px;color:#6B6B66">Visa, Mastercard, RuPay</span></div>
+</div>
+
+<div style="display:flex;align-items:center;gap:12px;padding:14px;border:1px solid #D4D5D2;border-radius:16px;background:#FBFBFB">
+<span style="flex:none;width:22px;height:22px;border-radius:50%;border:2px solid #6B6B66;box-sizing:border-box" role="img" aria-label="Not selected"></span>
+<div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:700">Cash on Delivery</span><span style="font-size:12.5px;color:#6B6B66">Pay ₹18,088 in cash when your order arrives</span></div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:8px;padding:14px;border-radius:14px;background:#EEEEEC">
+<span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6B6B66">Price details</span>
+<div style="display:flex;justify-content:space-between;font-size:14px"><span>Subtotal (2 items)</span><span style="font-variant-numeric:tabular-nums">₹20,098</span></div>
+<div style="display:flex;justify-content:space-between;font-size:14px"><span>Coupon WELCOME10</span><span style="font-variant-numeric:tabular-nums;color:#68513F;font-weight:600">−₹2,010</span></div>
+<div style="display:flex;justify-content:space-between;font-size:14px"><span>Delivery</span><span style="font-weight:600;color:#68513F">Free</span></div>
+<div style="display:flex;justify-content:space-between;font-size:16px;font-weight:700;padding-top:8px;border-top:1px solid #D4D5D2"><span>Total</span><span style="font-variant-numeric:tabular-nums">₹18,088</span></div>
+</div>
+
+</div>
+
+<div style="position:absolute;left:0;right:0;bottom:0;height:84px;background:#FBFBFB;border-top:1px solid #D4D5D2;padding:12px 16px 20px;box-sizing:border-box">
+<a href="Processing.dc.html" style="display:grid;place-items:center;width:100%;height:52px;border-radius:12px;background:#68513F;color:#FFFFFF;font-size:15px;font-weight:700;text-decoration:none">Place order · ₹18,088</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

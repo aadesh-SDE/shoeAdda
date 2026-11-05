@@ -1,0 +1,26 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Android Studio and IntelliJ
+.idea/
+*.iml
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Local machine settings and secrets
+local.properties
+*.jks
+*.keystore
+keystore.properties
+google-services.json
+
+# Generated and temporary files
+*.apk
+*.aab
+*.log
+*.hprof
+tmp/

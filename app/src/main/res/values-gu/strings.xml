@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_home">હોમ</string>
+    <string name="tab_categories">શ્રેણીઓ</string>
+    <string name="tab_wishlist">વિશલિસ્ટ</string>
+    <string name="tab_cart">કાર્ટ</string>
+    <string name="tab_profile">પ્રોફાઇલ</string>
+</resources>

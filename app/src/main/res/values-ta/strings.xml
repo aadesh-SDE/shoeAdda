@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_home">முகப்பு</string>
+    <string name="tab_categories">வகைகள்</string>
+    <string name="tab_wishlist">விருப்பப் பட்டியல்</string>
+    <string name="tab_cart">கார்ட்</string>
+    <string name="tab_profile">சுயவிவரம்</string>
+</resources>

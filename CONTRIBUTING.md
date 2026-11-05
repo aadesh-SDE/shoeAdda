@@ -1,9 +1,11 @@
 # Contributing to ShoeAdda
 
 ## Branches
-- `main` is always buildable. Do not commit to it directly; open a pull request.
-- Name branches `type/short-description`, for example `feature/cart`, `fix/price-rounding`, `chore/repo-setup`, `docs/tech-stack`.
-- One feature or one fix per branch and per pull request.
+This is a one-person project, so there are no pull requests. Work on a short branch, then merge it into `main` yourself and push `main`.
+- `main` is always buildable. Merge into it only after the build passes.
+- Name branches `type/short-description`, for example `feature/cart`, `fix/price-rounding`, `docs/tech-stack`.
+- One feature or one fix per branch. Merge with `git merge --ff-only` (or a normal merge), then delete the branch.
+- If more people join later, switch to pull requests and protect `main`.
 
 ## Commit messages
 Use Conventional Commits: `type: short summary` in the present tense.
@@ -21,8 +23,7 @@ Example: `feat: add cart screen and coupon validation`
 
 Do not add `Co-Authored-By` lines or tool attribution to commits or pull requests.
 
-## Pull requests
-Before opening one:
+## Before merging into main
 - The app builds and the tests pass.
 - Lint and formatting checks pass.
 - New text is in `strings.xml` and translated in all six languages (English, Hindi, Marathi, Gujarati, Tamil, Telugu).

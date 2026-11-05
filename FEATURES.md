@@ -144,6 +144,11 @@ DummyJSON has no sizes, so sizes are added locally.
 - Payment screens to include in the mock checkout
 - Which Version 1.x items move into Version 1
 
+## Phase 2 decisions (proposed, see `TECH_STACK.md`)
+- Kotlin, Jetpack Compose with strict Material 3, MVVM with unidirectional data flow (Google's recommended architecture), Room 2.x, Preferences DataStore, Retrofit for DummyJSON, Coil 3, Coroutines and Flow.
+- Not used: RIBs, server-driven UI (too heavy for a small app with no backend), Room 3 (still release candidate).
+- Confirmed: minimum Android 8.0 (API 26), Hilt, Navigation 3, no Firebase in v1, phone first (no tablet layouts in v1).
+
 ## 5. User journey
 
 ### Step by step

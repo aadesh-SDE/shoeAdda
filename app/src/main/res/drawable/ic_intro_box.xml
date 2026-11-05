@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Delivery box for intro slide 2. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="160dp"
+    android:height="130dp"
+    android:viewportWidth="160"
+    android:viewportHeight="130">
+    <path
+        android:fillColor="#68513F"
+        android:pathData="M20,40l60,-26 60,26v60l-60,26 -60,-26z" />
+    <path
+        android:pathData="M20,40l60,26 60,-26"
+        android:strokeAlpha="0.55"
+        android:strokeColor="#FBFBFB"
+        android:strokeLineJoin="round"
+        android:strokeWidth="3" />
+    <path
+        android:pathData="M80,66v60"
+        android:strokeAlpha="0.55"
+        android:strokeColor="#FBFBFB"
+        android:strokeWidth="3" />
+    <path
+        android:fillColor="#E8DFD0"
+        android:pathData="M50,27l60,26v20l-14,-6V60L50,47z" />
+    <path
+        android:fillColor="#FBFBFB"
+        android:pathData="M94,88h22a2,2 0,0 1,2 2v10a2,2 0,0 1,-2 2H94a2,2 0,0 1,-2 -2V90a2,2 0,0 1,2 -2z" />
+</vector>

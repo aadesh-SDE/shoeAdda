@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sneaker for intro slide 1, dark mode colors from the dark designs. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="62dp"
+    android:viewportWidth="100"
+    android:viewportHeight="62">
+    <path
+        android:fillColor="#D2573F"
+        android:pathData="M6,48c0,-6 6,-8 12,-10l16,-17c4,-4 10,-2 14,2l8,8c8,2 28,4 36,10 4,3 4,8 0,10H10z" />
+    <path
+        android:pathData="M30,43c14,-6 34,-6 52,0"
+        android:strokeColor="#131212"
+        android:strokeLineCap="round"
+        android:strokeWidth="3" />
+    <path
+        android:fillColor="#131212"
+        android:pathData="M6,48h88v7c0,2 -2,3 -4,3H10c-2,0 -4,-1 -4,-3z" />
+    <path
+        android:pathData="M36,22l7,8M44,24l7,8"
+        android:strokeColor="#131212"
+        android:strokeLineCap="round"
+        android:strokeWidth="2.2" />
+</vector>

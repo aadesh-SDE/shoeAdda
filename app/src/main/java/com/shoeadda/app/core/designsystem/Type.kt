@@ -1,6 +1,9 @@
 package com.shoeadda.app.core.designsystem
 
 import androidx.compose.material3.Typography
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.ReadOnlyComposable
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -62,6 +65,19 @@ private fun bodyFamily(script: Script): FontFamily = when (script) {
     Script.Gujarati -> NotoGujarati
     Script.Tamil -> NotoTamil
     Script.Telugu -> NotoTelugu
+}
+
+/** Font family for text that must be shown in a specific language's script, such as a language's own name. */
+fun fontFamilyForLanguage(languageCode: String): FontFamily = bodyFamily(scriptForLanguage(languageCode))
+
+/**
+ * English headlines are uppercase in the design. Indian scripts have no uppercase, so they are left as they are.
+ */
+@Composable
+@ReadOnlyComposable
+fun String.asHeadline(): String {
+    val language = LocalConfiguration.current.locales[0]?.language.orEmpty()
+    return if (scriptForLanguage(language) == Script.Latin) uppercase() else this
 }
 
 /**

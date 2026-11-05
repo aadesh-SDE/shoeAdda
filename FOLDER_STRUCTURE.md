@@ -156,6 +156,22 @@ androidTest/.../feature/cart/data/  Room DAO tests (in-memory database)
 androidTest/.../feature/cart/presentation/   Compose UI tests
 ```
 
-## 7. When to split into modules
+## 7. Build progress
+
+| Feature | Status |
+|---|---|
+| core (theme, fonts, languages, navigation shell) | done |
+| `start` (system splash, language, intro) | done, built but not tested; it is the template for the others |
+| `auth`, `catalog`, `home`, `categories`, `search`, `productlist` | not started |
+| `productdetail`, `wishlist`, `cart`, `checkout`, `orders`, `profile` | not started |
+
+The `start` feature settled these details for the others to copy:
+- A feature that needs the operating system (here the language switch) defines an interface in `domain/repository` and implements it in `data` (for example `LocaleController` and `AndroidLocaleController`).
+- Use cases are plain classes with `@Inject constructor` and `operator fun invoke`.
+- Each screen has a `ViewModel` that exposes `StateFlow<UiState>` and one-off events through a `Channel`.
+- `ViewModel`s are created with `hiltViewModel()` from `androidx.hilt.lifecycle.viewmodel.compose` and are tied to the Navigation 3 screen.
+- Small settings are stored in DataStore, behind a data source class inside the feature's `data/local`.
+
+## 8. When to split into modules
 
 Stay with the single `app` module for version 1. Because each feature already has its own layers and depends only on other features' `domain`, any `feature/*` folder can later become a Gradle module (`:feature:cart`) with few changes. Do the split only if build times get slow or more developers join.

@@ -5,4 +5,26 @@
     <string name="tab_wishlist">కోరికల జాబితా</string>
     <string name="tab_cart">కార్ట్</string>
     <string name="tab_profile">ప్రొఫైల్</string>
+
+    <string name="action_continue">కొనసాగించండి</string>
+    <string name="action_skip">దాటవేయి</string>
+    <string name="action_next">తదుపరి</string>
+    <string name="action_get_started">ప్రారంభించండి</string>
+
+    <string name="language_title">భాషను ఎంచుకోండి</string>
+    <string name="language_headline">మీ భాషను ఎంచుకోండి</string>
+    <string name="language_hint">మీరు దీన్ని తర్వాత ప్రొఫైల్‌లో మార్చవచ్చు.</string>
+
+    <string name="intro_1_title">మీ ఫిట్‌ను కనుగొనండి</string>
+    <string name="intro_1_body">బ్రాండ్ ద్వారా బ్రౌజ్ చేయండి, సైజ్ మరియు పాదం వెడల్పు ద్వారా ఫిల్టర్ చేయండి, సరైన జతను ఎంచుకోవడానికి సైజ్ గైడ్‌ను ఉపయోగించండి.</string>
+    <string name="intro_2_title">సులభంగా ఆర్డర్ చేయండి</string>
+    <string name="intro_2_body">కొన్ని ట్యాప్‌లలో చెక్అవుట్ చేయండి, మీ ఆర్డర్ ప్రతి దశను ట్రాక్ చేయండి, 30 రోజుల్లో ఉచితంగా సైజ్ మార్చుకోండి.</string>
+    <string name="chip_true_to_size">సైజ్ సరిగ్గా</string>
+    <string name="chip_order_placed">ఆర్డర్ చేయబడింది</string>
+    <string name="chip_on_the_way">దారిలో ఉంది</string>
+    <string name="chip_free_exchange">ఉచిత సైజ్ ఎక్స్‌ఛేంజ్</string>
+
+    <string name="cd_sneaker_illustration">స్నీకర్ చిత్రం</string>
+    <string name="cd_box_illustration">డెలివరీ బాక్స్ చిత్రం</string>
+    <string name="cd_page_of">పేజీ %1$d / %2$d</string>
 </resources>

@@ -8,4 +8,32 @@
     <string name="tab_wishlist">Wishlist</string>
     <string name="tab_cart">Cart</string>
     <string name="tab_profile">Profile</string>
+
+    <!-- Common actions -->
+    <string name="action_continue">Continue</string>
+    <string name="action_skip">Skip</string>
+    <string name="action_next">Next</string>
+    <string name="action_get_started">Get started</string>
+
+    <!-- Language screen -->
+    <string name="language_title">Select language</string>
+    <string name="language_headline">Choose your language</string>
+    <string name="language_hint">You can change this later in Profile.</string>
+
+    <!-- Intro -->
+    <string name="intro_1_title">Find your fit</string>
+    <string name="intro_1_body">Browse by brand, filter by size and foot width, and use the size guide to pick the right pair.</string>
+    <string name="intro_2_title">Order with ease</string>
+    <string name="intro_2_body">Check out in a few taps, track every step of your order, and swap sizes for free within 30 days.</string>
+    <string name="chip_uk_size" translatable="false">UK 9</string>
+    <string name="chip_foot_length" translatable="false">26.7 cm</string>
+    <string name="chip_true_to_size">True to size</string>
+    <string name="chip_order_placed">Order placed</string>
+    <string name="chip_on_the_way">On the way</string>
+    <string name="chip_free_exchange">Free size exchange</string>
+
+    <!-- Accessibility -->
+    <string name="cd_sneaker_illustration">Sneaker illustration</string>
+    <string name="cd_box_illustration">Delivery box illustration</string>
+    <string name="cd_page_of">Page %1$d of %2$d</string>
 </resources>

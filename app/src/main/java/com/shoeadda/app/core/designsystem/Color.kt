@@ -30,6 +30,9 @@ private val DarkBorder = Color(0xFF302E2E)
 private val DarkSale = Color(0xFFE58A72)
 private val DarkMist = Color(0xFF2B3A41)
 
+/** The logo background. It stays the same in light and dark mode. */
+val BrandCocoa = Color(0xFF68513F)
+
 /** Material 3 roles filled from the Cocoa and Mist palette. Dynamic color is not used. */
 internal val LightColorScheme: ColorScheme = lightColorScheme(
     primary = LightCocoa,
@@ -96,16 +99,20 @@ data class ShoeAddaExtraColors(
     val sale: Color,
     /** Highlight for badges. Decoration only. */
     val highlight: Color,
+    /** Warm backdrop for illustrations (tan in light mode, dark brown in dark mode). Decoration only. */
+    val warmBackdrop: Color,
 )
 
 internal val LightExtraColors = ShoeAddaExtraColors(
     photoBackdrop = LightMist,
     sale = LightSale,
     highlight = LightTan,
+    warmBackdrop = LightTan,
 )
 
 internal val DarkExtraColors = ShoeAddaExtraColors(
     photoBackdrop = DarkMist,
     sale = DarkSale,
     highlight = DarkCocoa,
+    warmBackdrop = Color(0xFF3E382F),
 )

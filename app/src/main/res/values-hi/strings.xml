@@ -5,4 +5,26 @@
     <string name="tab_wishlist">विशलिस्ट</string>
     <string name="tab_cart">कार्ट</string>
     <string name="tab_profile">प्रोफ़ाइल</string>
+
+    <string name="action_continue">जारी रखें</string>
+    <string name="action_skip">छोड़ें</string>
+    <string name="action_next">अगला</string>
+    <string name="action_get_started">शुरू करें</string>
+
+    <string name="language_title">भाषा चुनें</string>
+    <string name="language_headline">अपनी भाषा चुनें</string>
+    <string name="language_hint">आप इसे बाद में प्रोफ़ाइल में बदल सकते हैं।</string>
+
+    <string name="intro_1_title">अपनी फ़िट खोजें</string>
+    <string name="intro_1_body">ब्रांड के अनुसार ब्राउज़ करें, साइज़ और पैर की चौड़ाई से फ़िल्टर करें, और सही जोड़ी चुनने के लिए साइज़ गाइड का उपयोग करें।</string>
+    <string name="intro_2_title">आसानी से ऑर्डर करें</string>
+    <string name="intro_2_body">कुछ ही टैप में चेकआउट करें, अपने ऑर्डर के हर चरण को ट्रैक करें, और 30 दिनों के भीतर मुफ़्त में साइज़ बदलें।</string>
+    <string name="chip_true_to_size">साइज़ के अनुसार सही</string>
+    <string name="chip_order_placed">ऑर्डर हो गया</string>
+    <string name="chip_on_the_way">रास्ते में</string>
+    <string name="chip_free_exchange">मुफ़्त साइज़ एक्सचेंज</string>
+
+    <string name="cd_sneaker_illustration">स्नीकर का चित्र</string>
+    <string name="cd_box_illustration">डिलीवरी बॉक्स का चित्र</string>
+    <string name="cd_page_of">पेज %1$d / %2$d</string>
 </resources>

@@ -5,4 +5,26 @@
     <string name="tab_wishlist">விருப்பப் பட்டியல்</string>
     <string name="tab_cart">கார்ட்</string>
     <string name="tab_profile">சுயவிவரம்</string>
+
+    <string name="action_continue">தொடரவும்</string>
+    <string name="action_skip">தவிர்</string>
+    <string name="action_next">அடுத்து</string>
+    <string name="action_get_started">தொடங்கு</string>
+
+    <string name="language_title">மொழியைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="language_headline">உங்கள் மொழியைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="language_hint">இதை பின்னர் சுயவிவரத்தில் மாற்றலாம்.</string>
+
+    <string name="intro_1_title">உங்கள் அளவைக் கண்டறியுங்கள்</string>
+    <string name="intro_1_body">பிராண்ட் வாரியாக உலாவவும், அளவு மற்றும் பாத அகலம் மூலம் வடிகட்டவும், சரியான ஜோடியைத் தேர்வு செய்ய அளவு வழிகாட்டியைப் பயன்படுத்தவும்.</string>
+    <string name="intro_2_title">எளிதாக ஆர்டர் செய்யுங்கள்</string>
+    <string name="intro_2_body">சில தட்டல்களில் செக் அவுட் செய்யுங்கள், உங்கள் ஆர்டரின் ஒவ்வொரு படியையும் கண்காணியுங்கள், 30 நாட்களுக்குள் இலவசமாக அளவை மாற்றுங்கள்.</string>
+    <string name="chip_true_to_size">அளவு சரியாக</string>
+    <string name="chip_order_placed">ஆர்டர் செய்யப்பட்டது</string>
+    <string name="chip_on_the_way">வழியில் உள்ளது</string>
+    <string name="chip_free_exchange">இலவச அளவு மாற்றம்</string>
+
+    <string name="cd_sneaker_illustration">ஸ்னீக்கர் படம்</string>
+    <string name="cd_box_illustration">டெலிவரி பெட்டி படம்</string>
+    <string name="cd_page_of">பக்கம் %1$d / %2$d</string>
 </resources>

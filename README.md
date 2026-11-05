@@ -6,7 +6,7 @@ Tagline (placeholder): *Walk your way*
 
 ## Status
 - Phase 1, design: done. 44 screens in light and dark mode, in `design/`.
-- Phase 2, development: starting. The Android project has not been created yet.
+- Phase 2, development: started. The Android project builds (empty Compose screen). Next: theme, fonts, languages and navigation.
 
 ## Tech stack
 Kotlin, Jetpack Compose with strict Material 3, MVVM with unidirectional data flow, Hilt, Navigation 3, Room, DataStore, Retrofit, Coil. Minimum Android version: 8.0 (API 26). Application ID: `com.shoeadda.app`.
@@ -22,5 +22,13 @@ Kotlin, Jetpack Compose with strict Material 3, MVVM with unidirectional data fl
 | `design/` | Design files: `canvas/` (screens), `brand/` (logo, colors, fonts), `pdf/` (PDF export) |
 
 ## Building
-Requirements: Android Studio (stable) with JDK 17 or newer and the Android SDK.
-Build instructions will be added when the Android project is created.
+Requirements: Android Studio (stable), which includes a JDK and the Android SDK (platform 37).
+
+In Android Studio: open this folder, let Gradle sync, then run the `app` configuration.
+
+From a terminal (Windows, PowerShell), pointing at Android Studio's bundled JDK:
+```
+$env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"
+.\gradlew.bat assembleDebug
+```
+The APK is written to `app/build/outputs/apk/debug/app-debug.apk`.

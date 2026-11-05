@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sneaker mark from design/brand/logo-icon.svg, scaled to sit inside the adaptive icon safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="0.6"
+        android:scaleY="0.6"
+        android:translateX="21.6"
+        android:translateY="30.3">
+        <path
+            android:fillColor="#FBFBFB"
+            android:pathData="M8,50c0,-6 6,-8 12,-10l16,-17c4,-4 10,-2 14,2l8,8c8,2 26,4 34,10 4,3 4,8 0,10H12z" />
+        <path
+            android:fillColor="#A5967C"
+            android:pathData="M8,50h84v6c0,2 -2,3 -4,3H12c-2,0 -4,-1 -4,-3z" />
+        <path
+            android:pathData="M38,24l7,8M46,26l7,8"
+            android:strokeColor="#68513F"
+            android:strokeLineCap="round"
+            android:strokeWidth="2.4" />
+    </group>
+</vector>

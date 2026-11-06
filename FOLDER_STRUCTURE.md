@@ -162,7 +162,8 @@ androidTest/.../feature/cart/presentation/   Compose UI tests
 |---|---|
 | core (theme, fonts, languages, navigation shell) | done |
 | `start` (system splash, language, intro) | done, built but not tested; it is the template for the others |
-| `auth`, `catalog`, `home`, `categories`, `search`, `productlist` | not started |
+| `catalog` (59 shoes: 10 from DummyJSON, 49 bundled with photos) | done, built but not tested; has no screens yet |
+| `auth`, `home`, `categories`, `search`, `productlist` | not started |
 | `productdetail`, `wishlist`, `cart`, `checkout`, `orders`, `profile` | not started |
 
 The `start` feature settled these details for the others to copy:

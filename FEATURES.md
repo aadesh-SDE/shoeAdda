@@ -50,7 +50,7 @@ Products come from the free [DummyJSON](https://dummyjson.com) API (no key neede
 | Filter / sort | Source | How |
 |---|---|---|
 | Category (Men, Women) | DummyJSON `category` field | From the API |
-| Category (Sports, Casual, Formal, Kids) | Local | Mapped from DummyJSON `tags` or assigned in the local JSON |
+| Category (Sports, Casual, Formal) | Local | Mapped from DummyJSON `tags` or assigned in the local JSON. The Kids category is dropped in version 1 (no free kids' shoe photos found) |
 | Brand | DummyJSON `brand` field | From the API. The brand row on Home is the list of distinct brands |
 | Price range | DummyJSON `price` | Filtered locally |
 | Sort by price, discount, rating, newest | DummyJSON `price`, `discountPercentage`, `rating`, `meta.createdAt` | Sorted locally |
@@ -63,7 +63,7 @@ Products come from the free [DummyJSON](https://dummyjson.com) API (no key neede
 ### Sizes and foot size
 DummyJSON has no sizes, so sizes are added locally.
 
-1. **Size list:** each shoe gets a size list by category. Men: UK 6 to 11. Women: UK 3 to 8. Kids: UK 1 to 5.
+1. **Size list:** each shoe gets a size list by category. Men: UK 6 to 11. Women: UK 3 to 8. (Kids is dropped in version 1.)
 2. **Size chart:** one local table converts UK, US, EU and foot length in cm, so the user can switch between systems.
 3. **Stock per size:** DummyJSON gives one `stock` number per shoe. We split it across sizes. Sizes with 0 are greyed out and enable the Notify me button.
 4. **Foot size helper:** the size guide takes the user's foot length in cm and suggests the nearest size from the chart. The suggestion can be saved in the profile and pre-selected on product pages.
@@ -85,7 +85,7 @@ DummyJSON has no sizes, so sizes are added locally.
 - Guest browsing. Login is required at checkout and to save items to the wishlist
 
 ### Browse and discover
-- Home: banners, categories (Men, Women, Kids, Sports, Casual, Formal), brand row, new arrivals, trending
+- Home: banners, categories (Men, Women, Sports, Casual, Formal), brand row, new arrivals, trending
 - Product listing grid with infinite scroll
 - Search with suggestions and recent searches
 

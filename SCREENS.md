@@ -54,7 +54,7 @@ flowchart LR
 
 | ID | Screen | What it shows | Comes from | Goes to |
 |---|---|---|---|---|
-| S06 | Home | Top bar (logo, search field, cart badge), banner carousel, category chips (Men, Women, Kids, Sports, Casual, Formal), brand row, New arrivals, Trending, Recently viewed row | S01, S05, tabs | S08, S11, S13 |
+| S06 | Home | Top bar (logo, search field, cart badge), banner carousel, category chips (Men, Women, Sports, Casual, Formal; Kids is dropped in version 1, the mockups still show it), brand row, New arrivals, Trending, Recently viewed row | S01, S05, tabs | S08, S11, S13 |
 | S07 | Categories | Category tiles with images, brand list, tapping opens the product list pre-filtered | Tab | S08 |
 | S08 | Product list | Grid of shoe cards (image, brand, name, price, discount, rating, wishlist heart), filter and sort buttons with active-filter count, result count | S06, S07, S11 | S09, S10, S13 |
 | S09 | Filter sheet | Size (UK, US, EU toggle), brand, category, price range slider, color, foot width, activity type, Reset and Apply with result count | S08 | S08 |

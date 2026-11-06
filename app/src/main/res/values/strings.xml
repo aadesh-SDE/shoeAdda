@@ -32,7 +32,27 @@
     <string name="chip_on_the_way">On the way</string>
     <string name="chip_free_exchange">Free size exchange</string>
 
+    <!-- Home -->
+    <string name="home_search_hint">Search shoes, brands</string>
+    <string name="home_banner_label">New season</string>
+    <string name="home_banner_title">Find your fit</string>
+    <string name="home_banner_subtitle">Use code WELCOME10 for 10% off your first order</string>
+    <string name="home_shop_now">Shop now</string>
+    <string name="category_all">All</string>
+    <string name="category_men">Men</string>
+    <string name="category_women">Women</string>
+    <string name="category_sports">Sports</string>
+    <string name="category_casual">Casual</string>
+    <string name="section_brands">Shop by brand</string>
+    <string name="section_new_arrivals">New arrivals</string>
+    <string name="section_trending">Trending</string>
+    <string name="action_see_all">See all</string>
+    <string name="discount_off" translatable="false">-%1$d%%</string>
+
     <!-- Accessibility -->
+    <string name="cd_notifications">Notifications</string>
+    <string name="cd_cart">Cart</string>
+    <string name="cd_add_to_wishlist">Add to wishlist</string>
     <string name="cd_sneaker_illustration">Sneaker illustration</string>
     <string name="cd_box_illustration">Delivery box illustration</string>
     <string name="cd_page_of">Page %1$d of %2$d</string>

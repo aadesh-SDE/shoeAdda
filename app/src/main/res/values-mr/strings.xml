@@ -24,6 +24,23 @@
     <string name="chip_on_the_way">वाटेत आहे</string>
     <string name="chip_free_exchange">मोफत साईज एक्सचेंज</string>
 
+    <string name="home_search_hint">शूज, ब्रँड शोधा</string>
+    <string name="home_banner_label">नवीन हंगाम</string>
+    <string name="home_banner_title">तुमचा फिट शोधा</string>
+    <string name="home_banner_subtitle">पहिल्या ऑर्डरवर 10% सवलतीसाठी WELCOME10 कोड वापरा</string>
+    <string name="home_shop_now">आत्ताच खरेदी करा</string>
+    <string name="category_all">सर्व</string>
+    <string name="category_men">पुरुष</string>
+    <string name="category_women">महिला</string>
+    <string name="category_sports">स्पोर्ट्स</string>
+    <string name="category_casual">कॅज्युअल</string>
+    <string name="section_brands">ब्रँडनुसार खरेदी करा</string>
+    <string name="section_new_arrivals">नवीन आगमन</string>
+    <string name="section_trending">ट्रेंडिंग</string>
+    <string name="action_see_all">सर्व पहा</string>
+    <string name="cd_notifications">सूचना</string>
+    <string name="cd_cart">कार्ट</string>
+    <string name="cd_add_to_wishlist">विशलिस्टमध्ये जोडा</string>
     <string name="cd_sneaker_illustration">स्नीकरचे चित्र</string>
     <string name="cd_box_illustration">डिलिव्हरी बॉक्सचे चित्र</string>
     <string name="cd_page_of">पान %1$d / %2$d</string>

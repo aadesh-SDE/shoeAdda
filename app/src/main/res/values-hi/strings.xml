@@ -24,6 +24,23 @@
     <string name="chip_on_the_way">रास्ते में</string>
     <string name="chip_free_exchange">मुफ़्त साइज़ एक्सचेंज</string>
 
+    <string name="home_search_hint">जूते, ब्रांड खोजें</string>
+    <string name="home_banner_label">नया सीज़न</string>
+    <string name="home_banner_title">अपनी फ़िट खोजें</string>
+    <string name="home_banner_subtitle">पहले ऑर्डर पर 10% छूट के लिए कोड WELCOME10 का उपयोग करें</string>
+    <string name="home_shop_now">अभी खरीदें</string>
+    <string name="category_all">सभी</string>
+    <string name="category_men">पुरुष</string>
+    <string name="category_women">महिला</string>
+    <string name="category_sports">स्पोर्ट्स</string>
+    <string name="category_casual">कैज़ुअल</string>
+    <string name="section_brands">ब्रांड के अनुसार खरीदें</string>
+    <string name="section_new_arrivals">नए आगमन</string>
+    <string name="section_trending">ट्रेंडिंग</string>
+    <string name="action_see_all">सभी देखें</string>
+    <string name="cd_notifications">सूचनाएँ</string>
+    <string name="cd_cart">कार्ट</string>
+    <string name="cd_add_to_wishlist">विशलिस्ट में जोड़ें</string>
     <string name="cd_sneaker_illustration">स्नीकर का चित्र</string>
     <string name="cd_box_illustration">डिलीवरी बॉक्स का चित्र</string>
     <string name="cd_page_of">पेज %1$d / %2$d</string>

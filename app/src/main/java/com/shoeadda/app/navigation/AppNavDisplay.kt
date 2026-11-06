@@ -20,6 +20,7 @@ import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.runtime.rememberSaveableStateHolderNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import com.shoeadda.app.R
+import com.shoeadda.app.feature.home.presentation.HomeScreen
 import com.shoeadda.app.feature.start.presentation.StartDestination
 import com.shoeadda.app.feature.start.presentation.intro.IntroScreen
 import com.shoeadda.app.feature.start.presentation.language.LanguageScreen
@@ -82,7 +83,7 @@ fun AppNavDisplay(startDestination: StartDestination) {
                         },
                     )
                 }
-                entry<HomeKey> { PlaceholderScreen(stringResource(R.string.tab_home)) }
+                entry<HomeKey> { HomeScreen() }
                 entry<CategoriesKey> { PlaceholderScreen(stringResource(R.string.tab_categories)) }
                 entry<WishlistKey> { PlaceholderScreen(stringResource(R.string.tab_wishlist)) }
                 entry<CartKey> { PlaceholderScreen(stringResource(R.string.tab_cart)) }

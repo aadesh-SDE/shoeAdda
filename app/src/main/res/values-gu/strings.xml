@@ -24,6 +24,23 @@
     <string name="chip_on_the_way">રસ્તામાં છે</string>
     <string name="chip_free_exchange">મફત સાઇઝ એક્સચેન્જ</string>
 
+    <string name="home_search_hint">શૂઝ, બ્રાન્ડ શોધો</string>
+    <string name="home_banner_label">નવી સીઝન</string>
+    <string name="home_banner_title">તમારી ફિટ શોધો</string>
+    <string name="home_banner_subtitle">પહેલા ઓર્ડર પર 10% છૂટ માટે કોડ WELCOME10 વાપરો</string>
+    <string name="home_shop_now">હમણાં ખરીદો</string>
+    <string name="category_all">બધા</string>
+    <string name="category_men">પુરુષ</string>
+    <string name="category_women">મહિલા</string>
+    <string name="category_sports">સ્પોર્ટ્સ</string>
+    <string name="category_casual">કૅઝ્યુઅલ</string>
+    <string name="section_brands">બ્રાન્ડ પ્રમાણે ખરીદો</string>
+    <string name="section_new_arrivals">નવા આગમન</string>
+    <string name="section_trending">ટ્રેન્ડિંગ</string>
+    <string name="action_see_all">બધા જુઓ</string>
+    <string name="cd_notifications">સૂચનાઓ</string>
+    <string name="cd_cart">કાર્ટ</string>
+    <string name="cd_add_to_wishlist">વિશલિસ્ટમાં ઉમેરો</string>
     <string name="cd_sneaker_illustration">સ્નીકરનું ચિત્ર</string>
     <string name="cd_box_illustration">ડિલિવરી બૉક્સનું ચિત્ર</string>
     <string name="cd_page_of">પેજ %1$d / %2$d</string>

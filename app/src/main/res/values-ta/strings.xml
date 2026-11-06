@@ -24,6 +24,23 @@
     <string name="chip_on_the_way">வழியில் உள்ளது</string>
     <string name="chip_free_exchange">இலவச அளவு மாற்றம்</string>
 
+    <string name="home_search_hint">காலணிகள், பிராண்டுகளைத் தேடுங்கள்</string>
+    <string name="home_banner_label">புதிய சீசன்</string>
+    <string name="home_banner_title">உங்கள் அளவைக் கண்டறியுங்கள்</string>
+    <string name="home_banner_subtitle">முதல் ஆர்டரில் 10% தள்ளுபடிக்கு WELCOME10 குறியீட்டைப் பயன்படுத்துங்கள்</string>
+    <string name="home_shop_now">இப்போது வாங்குங்கள்</string>
+    <string name="category_all">அனைத்தும்</string>
+    <string name="category_men">ஆண்கள்</string>
+    <string name="category_women">பெண்கள்</string>
+    <string name="category_sports">விளையாட்டு</string>
+    <string name="category_casual">சாதாரணம்</string>
+    <string name="section_brands">பிராண்ட் வாரியாக வாங்குங்கள்</string>
+    <string name="section_new_arrivals">புதிய வரவுகள்</string>
+    <string name="section_trending">டிரெண்டிங்</string>
+    <string name="action_see_all">அனைத்தையும் பார்</string>
+    <string name="cd_notifications">அறிவிப்புகள்</string>
+    <string name="cd_cart">கார்ட்</string>
+    <string name="cd_add_to_wishlist">விருப்பப் பட்டியலில் சேர்</string>
     <string name="cd_sneaker_illustration">ஸ்னீக்கர் படம்</string>
     <string name="cd_box_illustration">டெலிவரி பெட்டி படம்</string>
     <string name="cd_page_of">பக்கம் %1$d / %2$d</string>

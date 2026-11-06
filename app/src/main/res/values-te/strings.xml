@@ -24,6 +24,23 @@
     <string name="chip_on_the_way">దారిలో ఉంది</string>
     <string name="chip_free_exchange">ఉచిత సైజ్ ఎక్స్‌ఛేంజ్</string>
 
+    <string name="home_search_hint">షూలు, బ్రాండ్‌లను వెతకండి</string>
+    <string name="home_banner_label">కొత్త సీజన్</string>
+    <string name="home_banner_title">మీ ఫిట్‌ను కనుగొనండి</string>
+    <string name="home_banner_subtitle">మొదటి ఆర్డర్‌పై 10% తగ్గింపుకు WELCOME10 కోడ్ వాడండి</string>
+    <string name="home_shop_now">ఇప్పుడే కొనండి</string>
+    <string name="category_all">అన్నీ</string>
+    <string name="category_men">పురుషులు</string>
+    <string name="category_women">మహిళలు</string>
+    <string name="category_sports">క్రీడలు</string>
+    <string name="category_casual">క్యాజువల్</string>
+    <string name="section_brands">బ్రాండ్ ప్రకారం కొనండి</string>
+    <string name="section_new_arrivals">కొత్త రాకలు</string>
+    <string name="section_trending">ట్రెండింగ్</string>
+    <string name="action_see_all">అన్నీ చూడండి</string>
+    <string name="cd_notifications">నోటిఫికేషన్లు</string>
+    <string name="cd_cart">కార్ట్</string>
+    <string name="cd_add_to_wishlist">కోరికల జాబితాలో చేర్చు</string>
     <string name="cd_sneaker_illustration">స్నీకర్ చిత్రం</string>
     <string name="cd_box_illustration">డెలివరీ బాక్స్ చిత్రం</string>
     <string name="cd_page_of">పేజీ %1$d / %2$d</string>

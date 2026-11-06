@@ -41,7 +41,8 @@ private fun variableFamily(resId: Int): FontFamily = FontFamily(
     },
 )
 
-private val BarlowCondensed = FontFamily(
+/** The headline font. Also used for the ShoeAdda wordmark, which is always shown in Latin letters. */
+val BarlowCondensed = FontFamily(
     Font(R.font.barlow_condensed_semibold, FontWeight.SemiBold),
     Font(R.font.barlow_condensed_bold, FontWeight.Bold),
 )
